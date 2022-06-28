@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>McFly - Authentic American Food</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="./img/sin-subtitulo.png"> 
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body class="bodyIndex">
     <!--Configuro un preheader para añadir data general de la página-->
@@ -30,23 +31,38 @@
     </section>
      <!--Header y NAV sticky.-->
     <header>
-        <section class="header">
-            <a href="./index.html" class="header__imagen"><img src="./img/logo-mcfly.png" alt="Logo McFly" class="header__imagen"></a>
-            <nav class="header__nav">
-                <ul class="header__nav--list">
-                    <li class="header__nav--list--inicio"><a href="./index.html">Inicio</a></li>
-                    <li class="header__nav--list--menu"><a href="./pages/menu.html">Menú</a></li>
-                    <li class="header__nav--list--local"><a href="./pages/local.html">Nuestro Local</a></li>
-                    <li class="header__nav--list--contacto"><a href="./pages/contacto.html">Contacto</a></li>
-                    <li class="header__nav--list--galeria"><a href="./pages/galeria.html">Galeria</a></li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+              <a class="navbar-brand" href="./index.html"><img src="./img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav container-fluid">
+                  <li class="nav-item">
+                    <a class="nav-link activo" aria-current="page" href="./index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/menu.html">Menú</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/local.html">Nuestro local</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/galeria.html">Galería</a>
+                  </li>
                 </ul>
-            </nav>
-        </section>
+              </div>
+            </div>
+          </nav>
     </header>
     <main class="mainIndex">
         <!--Sección principal de la página, con vídeo introductorio.-->
         <section class="mainIndex__intro">
-            <h1 class="mainIndex__intro--titulo">Experiencia McFly</h1>
+            <h1 class="mainIndex__intro--titulo titulo">Experiencia McFly</h1>
             <div class="mosaico"></div>
             <article class="mainIndex__intro--articulo">
                 <video src="./vids/10000000_203489251812153_8991553649730105194_n.mp4" controls class="mainIndex__intro--articulo--video"></video>
@@ -54,16 +70,16 @@
         </section>
         <div class="mosaico"></div>
         <!--Sección con información general de nuestros productos y forma de trabajar.-->
-        <section class="mainIndex__info">
-            <article class="mainIndex__info--art">
+        <section class="mainIndex__info row">
+            <article class="mainIndex__info--art col-lg">
                 <img src="./img/muca.png" alt="">
                 <p>Trabajamos con la mejor carne de la zona, traída por MUCA, para satisfacer a nuestros clientes.</p>
             </article>
-            <article class="mainIndex__info--art">
+            <article class="mainIndex__info--art col-lg">
                 <img src="./img/smashed.png" alt="">
                 <p>Todas nuestras hamburguesas se hacen a la plancha, utlizando la técnica del smash.</p>
             </article>
-            <article class="mainIndex__info--art">
+            <article class="mainIndex__info--art col-lg">
                 <img src="./img/natural.png" alt="">
                 <p>Trabajamos solo con ingredientes frescos, casi la totalidad del menú esta elaborado en nuestro restaurante.</p>
             </article>
@@ -71,7 +87,7 @@
         <div class="mosaico"></div>
         <!--Sección de redirección a plataformas para pedir online en el restaurante.-->
         <section class="mainIndex__pedidos">
-            <h2 class="mainIndex__pedidos--titulo">Hacé tu pedido online</h2>
+            <h2 class="mainIndex__pedidos--titulo titulo">Hacé tu pedido online</h2>
             <article class="mainIndex__pedidos--cajaimg">
                 <a href="https://neuquen.toque.com.ar/web/detalle/?id=3337" value="_blank" target="_blank" ><img src="./img/Screenshot_2.png" alt="toque" class="mainIndex__pedidos--cajaimg--img"></a>
                 <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/mcfly-american-food-menu" target="_blank" ><img src="./img/untitled-1_56.png" alt="pedidosya" class="mainIndex__pedidos--cajaimg--img"></a>
@@ -80,31 +96,34 @@
         </section>
     </main>
     <footer>
-        <!--Footer con sección de contacto,ubicación y redes sociales.-->
-        <section class="footer__contactos">
-            <h5 class="footer__contactos--titulo">CONTACTO</h5>
-             <article class="footer__contactos--texto">
-                <h6 class="footer__contactos--texto--titulo">Dirección:</h6>
-                <p class="footer__contactos--texto--p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
-                <h6 class="footer__contactos--texto--titulo">Teléfono:</h6>
-                <p class="footer__contactos--texto--p">2996112270</p>
-                <h6 class="footer__contactos--texto--titulo">EMail</h6>
-                <p class="footer__contactos--texto--p">mcflynqn@gmail.com</p> 
-            </article>
-        </section>
-        <section class="footer__mcfly">
-            <img src="./img/solo-letras.png" alt="logo-mcfly" class="footer__mcfly--img">
-            <p>Restaurante ambientado en los 60's con asientos de </p>
-            <p>cuero rojo, pin-ups y comida americana.</p>
-        </section>
-        <section class="footer__redes">
-            <h5 class="footer__redes--titulo">REDES SOCIALES</h5>
-            <article class="footer__redes--img">
-                <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
-                <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
-            </article>
-        </section>
+        <div class="row">
+            <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <section class="footer__contactos col-lg">
+                <h5 class="footer__contactos--titulo">CONTACTO</h5>
+                <article class="footer__contactos--texto">
+                    <h6 class="footer__contactos--texto--titulo">Dirección:</h6>
+                    <p class="footer__contactos--texto--p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+                    <h6 class="footer__contactos--texto--titulo">Teléfono:</h6>
+                    <p class="footer__contactos--texto--p">2996112270</p>
+                    <h6 class="footer__contactos--texto--titulo">EMail</h6>
+                    <p class="footer__contactos--texto--p">mcflynqn@gmail.com</p> 
+                </article>
+            </section>
+            <section class="footer__mcfly col-lg">
+                <img src="./img/solo-letras.png" alt="logo-mcfly" class="footer__mcfly--img">
+                <p>Restaurante ambientado en los 60's con asientos de </p>
+                <p>cuero rojo, pin-ups y comida americana.</p>
+            </section>
+            <section class="footer__redes col-lg">
+                <h5 class="footer__redes--titulo">REDES SOCIALES</h5>
+                <article class="footer__redes--img">
+                    <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
+                </article>
+            </section>
+        </div>
         <p class="footer__derechos">© 2022 McFly American Food. Todos los derechos reservados.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

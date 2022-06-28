@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - McFly</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,47 +30,66 @@
     </section>
     <!--Header y NAV sticky, no puedo lograr posicionar bien en el NAV, en un futuro lo haré más chico-->
     <header>
-        <section class="header">
-            <a href="../index.html" class="header__imagen"><img src="../img/logo-mcfly.png" alt="Logo McFly" class="header__imagen"></a>
-            <nav class="header__nav">
-                <ul class="header__nav--nav--list">
-                    <li class="header__nav--list--inicio"><a href="../index.html">Inicio</a></li>
-                    <li class="header__nav--list--menu"><a href="./menu.html">Menú</a></li>
-                    <li class="header__nav--list--local"><a href="./local.html">Nuestro Local</a></li>
-                    <li class="header__nav--list--contacto"><a href="./contacto.html">Contacto</a></li>
-                    <li class="header__nav--list--galeria"><a href="./galeria.html">Galeria</a></li>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+              <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav container-fluid">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./menu.html">Menú</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./local.html">Nuestro local</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link activo" aria-current="page" href="./galeria.html">Galería</a>
+                  </li>
                 </ul>
-            </nav>
-        </section>
+              </div>
+            </div>
+          </nav>
     </header>
-    <!--No voy a profundizar en la sección de la galería hasta entrar en grids u otras funciones que me permitan desarrollarla mejor-->
-    <img src="../img/construcción.png" alt="Website en construcción">
+    <main>
+      <img src="../img/construcción.png" alt="">
+    </main>  
     <footer>
-        <!--Footer con sección de contacto,ubicación y redes sociales.-->
-        <section class="footer__contactos">
-            <h5 class="footer__contactos--titulo">CONTACTO</h5>
-             <article class="footer__contactos--texto">
-                <h6 class="footer__contactos--texto--titulo">Dirección:</h6>
-                <p class="footer__contactos--texto--p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
-                <h6 class="footer__contactos--texto--titulo">Teléfono:</h6>
-                <p class="footer__contactos--texto--p">2996112270</p>
-                <h6 class="footer__contactos--texto--titulo">EMail</h6>
-                <p class="footer__contactos--texto--p">mcflynqn@gmail.com</p> 
-            </article>
-        </section>
-        <section class="footer__mcfly">
-            <img src="../img/solo-letras.png" alt="logo-mcfly" class="footer__mcfly--img">
-            <p>Restaurante ambientado en los 60's con asientos de </p>
-            <p>cuero rojo, pin-ups y comida americana.</p>
-        </section>
-        <section class="footer__redes">
-            <h5 class="footer__redes--titulo">REDES SOCIALES</h5>
-            <article class="footer__redes--img">
-                <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
-                <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
-            </article>
-        </section>
-        <p class="footer__derechos">© 2022 McFly American Food. Todos los derechos reservados.</p>
-    </footer>
+      <div class="row">
+          <!--Footer con sección de contacto,ubicación y redes sociales.-->
+          <section class="footer__contactos col-lg">
+              <h5 class="footer__contactos--titulo">CONTACTO</h5>
+              <article class="footer__contactos--texto">
+                  <h6 class="footer__contactos--texto--titulo">Dirección:</h6>
+                  <p class="footer__contactos--texto--p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+                  <h6 class="footer__contactos--texto--titulo">Teléfono:</h6>
+                  <p class="footer__contactos--texto--p">2996112270</p>
+                  <h6 class="footer__contactos--texto--titulo">EMail</h6>
+                  <p class="footer__contactos--texto--p">mcflynqn@gmail.com</p> 
+              </article>
+          </section>
+          <section class="footer__mcfly col-lg">
+              <img src="../img/solo-letras.png" alt="logo-mcfly" class="footer__mcfly--img">
+              <p>Restaurante ambientado en los 60's con asientos de </p>
+              <p>cuero rojo, pin-ups y comida americana.</p>
+          </section>
+          <section class="footer__redes col-lg">
+              <h5 class="footer__redes--titulo">REDES SOCIALES</h5>
+              <article class="footer__redes--img">
+                  <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
+                  <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
+              </article>
+          </section>
+      </div>
+      <p class="footer__derechos">© 2022 McFly American Food. Todos los derechos reservados.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -18,12 +18,28 @@ a{
     background-image: url(../img/mosaico-nav.png); 
     height: 32px; 
 }
+/*Reinicio ciertas declaraciones de bootstrap que no me gustan*/
+p{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    font-weight: 600;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
 /*-------------------------------------------HEADER STYLE-------------------------------------------------*/
 /*Agrego una sección previa al header que contiene información de la página*/
 .preHeader{
     background-color: rgb(0, 0, 0);
     color:white;
-    height: 2rem;
+    height: 32px;
     display: flex;
     width: 100%;
     justify-content:space-between;
@@ -42,7 +58,7 @@ a{
     margin-left: 5px;
 }
 .preHeaderData i{
-    height: 1rem;
+    font-size: 1rem;
     margin-left: 20px; 
     color: rgb(211, 211, 211);
 }
@@ -75,18 +91,14 @@ a{
 }
 .header__imagen{
     background-color: rgb(27, 27, 27); 
-    height: 5rem; 
+    height: 100px; 
     margin-left: 5%; 
     margin-top: 5px; 
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
-.header{
-    background-color: rgb(27, 27, 27);
-    width: 98vw;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+header{
+    background-color: hsla(0, 0%, 11%, 0.);
+
 }
 /*Cambio el display del header para acoplarlo a la resolución, modifico un poco el logo.*/
 @media screen and (max-width:1000px){
@@ -96,47 +108,33 @@ a{
         width: 100vw;
     }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:1000px){
     .header{
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
     }
     .header__imagen{
         margin-left: 0%;
-        height: 6.5rem;
+        height: 100px;
         margin-top: 10px;
     }
-}
-.header__nav{
-   width: fit-content;
-   margin-right: 25px;
+    .navbar-nav{
+        text-align: center;
+    }
 }
 nav ul{
-    display: flex;
     gap: 25px;
-    flex-wrap: wrap;
+    color: white;
 }
 nav ul li{
     /*Configuración del nav.*/
-    list-style-type: none;
     font-size: 2rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
 /*Configuración full responsive del NAV*/
 @media screen and (max-width:1000px){
-    .header__nav{
-        margin-right: 20px;
-        margin-top: 10px;
-        justify-self: flex-end;
-    }
-    nav ul{
-        gap: 10px;
-    }
     nav ul li{
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 }
 @media screen and (max-width:700px){
@@ -145,15 +143,33 @@ nav ul li{
         margin-top: 20px;
     }
     nav ul{
-        gap: 10px;
+        gap: 5px;
     }
     nav ul li{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 }
-nav a:hover{
+.nav-link{
+    color: white;
+    padding: 0;
+}
+.nav-link:hover{
     color: #fe0000;
     border-top: solid 2px #fe0000;
+}
+.activo{
+    color: #fe0000;
+}
+.activo:hover{
+    color: white;
+}
+@media screen and (min-width:1000px){
+    .navbar,.header{
+        height: 110px;
+    }
+}
+.navbar-nav{
+    justify-content: flex-end;
 }
 /*------------------------------------------------FOOTER STYLE---------------------------------------------*/
 footer{
@@ -162,20 +178,9 @@ footer{
     background-color: rgb(22, 21, 21);
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
-    display: grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows: 1fr,1fr;
-    grid-template-areas: "contacto mcfly redes""derechos derechos derechos";
-    align-items: center;
-    justify-content: center;
+    width: 100%;
 }
 /*Modifico el display a flex para la versión de menos de 1000px*/
-@media screen and (max-width:1000px){
-    footer{
-        display: flex;
-        flex-direction: column;
-    }
-}
 .footer__mcfly{
     /*Resumen de la página*/
     margin-top: 10px;
@@ -275,12 +280,8 @@ body{
         width: 100%;
     }
 }
-/*Diseño de la sección de información, con su adaptación full responsive.*/
+/*Diseño de la sección de información.*/
 .mainIndex__info{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: center;
-    align-items: center;
     margin-top: 25px;
     margin-bottom: 25px;
 }
@@ -288,10 +289,19 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 .mainIndex__info--art img{
-    width: 80%;
+    width: 60%;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .mainIndex__info--art img:hover{
+        transform: scale(1.1);
+}
 }
 .mainIndex__info--art p{
     padding-top: 10px;
@@ -302,12 +312,8 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 @media screen and (max-width:700px){
-    .mainIndex__info{
-        display: flex;
-        flex-direction: column;
-    }
     .mainIndex__info--art img{
-        width: 80%;
+        width: 60%;
     }
     .mainIndex__info--art p{
         font-size: 0.8rem;
@@ -316,13 +322,8 @@ body{
     }
 }
 @media screen and (max-width:1000px){
-    .mainIndex__info{
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .mainIndex__info img{
-        width: 65%;
+    .mainIndex__info--art{
+        margin-top: 30px;
     }
 }
 /*Configuro la caja de la sección de pedidos*/
@@ -356,6 +357,15 @@ body{
 }
 .mainIndex__pedidos--cajaimg--img{
     height: 100px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .mainIndex__pedidos--cajaimg--img:hover{
+        transform: scale(1.5);
+}
 }
 /*Tamaño modificado de las imagenes para la version mobile*/
 @media screen and (max-width:700px){
@@ -429,6 +439,8 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 .menuMF__tarjetas--cardBurgers{
     height: 400px;
@@ -440,6 +452,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 .menuMF__tarjetas--cardExtras{
     height: 400px;
@@ -451,6 +465,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .menuMF__tarjetas--cardMenu:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+    }
+    .menuMF__tarjetas--cardBurgers:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+    }
+    .menuMF__tarjetas--cardExtras:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+    }
 }
 /*Oculto el nav para la versión mobile, no me gusta como se adapta*/
 @media screen and (max-width:700px){
@@ -473,7 +505,7 @@ body{
 }
 /*Configuro las imagenes del menú completo*/
 .menuMF__menuCompleto{
-    margin-top: 65px;
+    margin-top: 75px;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -485,6 +517,16 @@ body{
     width: 25%;
     border: 1px solid #fe0000;
     border-radius: 35px;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .menuMF__menuCompleto img:hover{
+        transform: scale(1.1);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+    }
 }
 .menuMF__menuCompleto--titulo{
     width: 100%;
@@ -542,7 +584,7 @@ body{
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-top: 65px;
+    margin-top: 75px;
     color: #fe0000;
     font-size: 5rem; 
     font-family: 'harlow', sans-serif;
@@ -564,6 +606,16 @@ body{
     border-radius: 35px;
     height: 400px;
     background-color: rgba(0, 0, 0, 0.822);
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .menuMF__burgers--card:hover{
+        transform: scale(1.05);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+    }
 }
 .menuMF__burgers--card--img{
     width: 80%;
@@ -577,12 +629,13 @@ body{
 }
 .menuMF__burgers--card--texto{
     font-size: 1.1rem;
-    margin-top: 5px;
+    margin: 5px;
     margin-bottom: 3%;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     text-align: center;
     font-style: italic;
+
 }
 /*Configuro la sección de hamburguesas para que sea responsive.*/
 @media screen and (max-width:700px){
@@ -602,30 +655,30 @@ body{
 /*Galería con el resto de cosas del menú*/
 .menuMF__extras{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 100%;
     padding-bottom: 25px;
+    justify-content: center;
+    align-items: center;
 }
 .menuMF__extras--titulo{
     width: 100%;
     text-align: center;
-    margin-top: 65px;
+    margin-top: 75px;
     padding-bottom: 25px;
     text-align: center;
     color: #fe0000;
     font-size: 5rem; 
     font-family: 'harlow', sans-serif;
 }
+.carousel{
+    width: 25%;
+    justify-self: center;
+}
 @media screen and (max-width:1000px){
     .menuMF__extras--titulo{
         margin-top: 20px;
     }
-}
-.MenuMF__extras--img{
-    display: flex;
-}
-.MenuMF__extras--img img{
-    width: 20%;
 }
 /*Modifico el tamaño de las imagenes y le agrego un scroll en el overflow para hacer una especie de galería*/
 @media screen and (max-width:1000px){
@@ -633,11 +686,8 @@ body{
         margin-top: 25px;
         font-size: 4rem;
     }
-    .MenuMF__extras--img{
-        overflow-x: scroll;
-    }
-    .MenuMF__extras--img img{
-        width: 95%;
+    .carousel{
+        width: 80%;
     }
 }
 /*---------------------------------------------CONTACTO STYLE----------------------------------------------*/
