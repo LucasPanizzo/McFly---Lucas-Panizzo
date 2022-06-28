@@ -153,9 +153,11 @@ nav ul li{
     color: white;
     padding: 0;
 }
-.nav-link:hover{
-    color: #fe0000;
-    border-top: solid 2px #fe0000;
+@media screen and (min-width:1000px){
+    .nav-link:hover{
+        color: #fe0000;
+        border-top: solid 2px #fe0000;
+    }
 }
 .activo{
     color: #fe0000;
