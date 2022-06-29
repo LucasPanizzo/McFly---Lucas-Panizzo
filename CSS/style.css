@@ -91,8 +91,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .header__imagen{
     background-color: rgb(27, 27, 27); 
-    height: 100px; 
-    margin-left: 5%; 
+    height: 100px;  
     margin-top: 5px; 
     margin-bottom: 5px;
 }
@@ -100,20 +99,9 @@ header{
     background-color: hsla(0, 0%, 11%, 0.);
 
 }
-/*Cambio el display del header para acoplarlo a la resolución, modifico un poco el logo.*/
+/*Modifico ciertas cuestiones del nav para adjustarlo al responsive*/
 @media screen and (max-width:1000px){
-    .header{
-        display: grid;
-        grid-template-columns: 20% 80%;
-        width: 100vw;
-    }
-}
-@media screen and (max-width:1000px){
-    .header{
-        display: flex;
-    }
     .header__imagen{
-        margin-left: 0%;
         height: 100px;
         margin-top: 10px;
     }
@@ -138,10 +126,6 @@ nav ul li{
     }
 }
 @media screen and (max-width:700px){
-    .header__nav{
-        margin-right: 0;
-        margin-top: 20px;
-    }
     nav ul{
         gap: 5px;
     }
@@ -170,8 +154,8 @@ nav ul li{
         height: 110px;
     }
 }
-.navbar-nav{
-    justify-content: flex-end;
+.navbar__icon{
+    width: 30px;
 }
 /*------------------------------------------------FOOTER STYLE---------------------------------------------*/
 footer{
@@ -673,16 +657,66 @@ body{
     font-size: 5rem; 
     font-family: 'harlow', sans-serif;
 }
-.carousel{
+/*Configuarción del carousel*/
+.menuMF__extras__carousel{
     width: 25%;
     justify-self: center;
 }
+/*Oculto el carousel para la versión desktop*/
+@media screen and (min-width:1000px){
+    .menuMF__extras__carousel{
+        display: none;
+    }
+}
+/*Configuro la galería para la versión desktop con un grid.*/
+.menuMF__extras__galeria{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 2;
+    align-items: flex-end;
+    grid-template-areas: "img1 img3 img4 img6"
+                         "img2 img3 img5 img6";                     
+}
+.menuMF__extras__galeria img{
+    width: 95%;
+    border: 1px black solid;
+}
+.menuMF__extras__galeria__img1{
+    grid-area: img1;
+}
+.menuMF__extras__galeria__img2{
+    grid-area: img2;
+}
+.menuMF__extras__galeria__img3{
+    grid-area: img3;
+}.menuMF__extras__galeria__img4{
+    grid-area: img4;
+}
+.menuMF__extras__galeria__img5{
+    grid-area: img5;
+}
+.menuMF__extras__galeria__img6{
+    grid-area: img6;
+}
+/*Agrego un efecto mediante animaciones con un hover*/
+@media screen and (min-width:1000px){
+
+    .menuMF__extras__galeria img:hover{
+        transform: scale(1.2);
+        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+
+    }
+}
+/*Oculto la galería grid para las versiones de menos de 1000px*/
 @media screen and (max-width:1000px){
     .menuMF__extras--titulo{
         margin-top: 20px;
     }
+    .menuMF__extras__galeria{
+        display: none;
+    }
 }
-/*Modifico el tamaño de las imagenes y le agrego un scroll en el overflow para hacer una especie de galería*/
+/*Modifico el tamaño de las imagenes y del titulo*/
 @media screen and (max-width:1000px){
     .menuMF__extras--titulo{
         margin-top: 25px;
@@ -839,5 +873,42 @@ body{
     }
     .local__cuerpo--card img{
         width: 100%;
+    }
+}
+/*--------------------------------------------------------------galeria style------------------------------------------------*/
+.galeria{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+}
+.galeria img{
+    width: 300px;
+    height: 300px;
+}
+.modal-content img{
+    max-height: 92vh;
+}
+.galeria__titulo{
+    text-align: center;
+    margin-top: 65px;
+    padding-bottom: 25px;
+    text-align: center;
+    color: #fe0000;
+    font-size: 5rem; 
+    font-family: 'harlow', sans-serif;
+}
+/*Modifico los titulos y sus margenes para menor res.*/
+@media screen and (max-width:700px){
+    .galeria__titulo{
+        font-size: 3rem;
+        margin-top: 25px;
+        padding-bottom: 15px;
+    }
+}
+@media screen and (max-width:1000px){
+    .galeria__titulo{
+        margin-top: 25px;
     }
 }

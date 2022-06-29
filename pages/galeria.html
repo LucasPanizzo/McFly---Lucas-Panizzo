@@ -7,11 +7,11 @@
     <title>Galería - McFly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="../img/sin-subtitulo.png">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
     <section class="preHeader">
@@ -31,13 +31,13 @@
     <!--Header y NAV sticky, no puedo lograr posicionar bien en el NAV, en un futuro lo haré más chico-->
     <header>
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid header">
+            <div class="container header">
               <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <img src="../img/icons/menu.png" alt="" class="navbar__icon">
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav container-fluid">
+                <ul class="navbar-nav container-fluid justify-content-end">
                   <li class="nav-item">
                     <a class="nav-link" href="../index.html">Inicio</a>
                   </li>
@@ -59,8 +59,215 @@
           </nav>
     </header>
     <main>
-      <img src="../img/construcción.png" alt="">
-    </main>  
+      <h2 class="galeria__titulo titulo">Galería</h2>
+      <section class="galeria">
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage0">
+          <img src="../img/galeria/miniaturas/barra.png" alt="Barra McFly">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage1">
+          <img src="../img/galeria/miniaturas/burgerled.png" alt="Led Hamburguesa">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage2">
+          <img src="../img/galeria/miniaturas/puerta.png" alt="Puerta local">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage3">
+          <img src="../img/galeria/miniaturas/canasta.png" alt="Canasta">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage4">
+          <img src="../img/galeria/miniaturas/cerveza.png" alt="cerveza">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage5">
+          <img src="../img/galeria/miniaturas/canasta2.png" alt="Canasta">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage6">
+          <img src="../img/galeria/miniaturas/mesa.png" alt="Mesa local">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage7">
+          <img src="../img/galeria/miniaturas/comidas.png" alt="comidas">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage8">
+          <img src="../img/galeria/miniaturas/cervezacayendo.png" alt="cerveza cayendo">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage9">
+          <img src="../img/galeria/miniaturas/papas.png" alt="Papas Fritas">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage10">
+          <img src="../img/galeria/miniaturas/tirada.png" alt="Cerveza tirada">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage11">
+          <img src="../img/galeria/miniaturas/local.png" alt="Local McFly">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage12">
+          <img src="../img/galeria/miniaturas/cafe.png" alt="cafe">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage13">
+          <img src="../img/galeria/miniaturas/trago.png" alt="trago">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage14">
+          <img src="../img/galeria/miniaturas/local2.png" alt="Local McFly">
+        </a>
+        <a href="#!" data-bs-toggle="modal" data-bs-target="#modalImage15">
+          <img src="../img/galeria/miniaturas/waffles.png" alt="waffles">
+        </a>
+      </section>
+    </main> 
+    
+    <!--Galeria Modal-->
+
+    <!--Imagen 0-->
+    <div tabindex="-1" aria-labelledby="modalImage0" aria-hidden="true" class="modal fade" id="modalImage0">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/barrafull.jpg" alt="Barra">
+        </div>
+      </div>
+    </div>
+
+    <!--Imagen 1-->
+    <div tabindex="-1" aria-labelledby="modalImage1" aria-hidden="true" class="modal fade" id="modalImage1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/burgerledfull.jpg" alt="Led Hamburguesa">
+        </div>
+      </div>
+    </div>      
+
+    <!--Imagen 2-->
+    <div tabindex="-1" aria-labelledby="modalImage2" aria-hidden="true" class="modal fade" id="modalImage2">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/puerta.png" alt="Puerta local">
+        </div>
+      </div>
+    </div>   
+
+
+    <!--Imagen 3-->
+    <div tabindex="-1" aria-labelledby="modalImage3" aria-hidden="true" class="modal fade" id="modalImage3">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/canasta.png" alt="Canasta comida">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 4-->
+    <div tabindex="-1" aria-labelledby="modalImage4" aria-hidden="true" class="modal fade" id="modalImage4">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/cerveza.png" alt="Cerveza">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 5-->
+    <div tabindex="-1" aria-labelledby="modalImage5" aria-hidden="true" class="modal fade" id="modalImage5">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/canasta2.png" alt="Canasta">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 6-->
+    <div tabindex="-1" aria-labelledby="modalImage6" aria-hidden="true" class="modal fade" id="modalImage6">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/mesa.png" alt="Mesa local">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 7-->
+    <div tabindex="-1" aria-labelledby="modalImage7" aria-hidden="true" class="modal fade" id="modalImage7">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/comidas.png" alt="Comidas local">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 8-->
+    <div tabindex="-1" aria-labelledby="modalImage8" aria-hidden="true" class="modal fade" id="modalImage8">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/cervezacayendo.png" alt="Cerveza cayendo">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 9-->
+    <div tabindex="-1" aria-labelledby="modalImage9" aria-hidden="true" class="modal fade" id="modalImage9">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/papas.png" alt="Papas Fritas">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 10-->
+    <div tabindex="-1" aria-labelledby="modalImage10" aria-hidden="true" class="modal fade" id="modalImage10">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/tirada.png" alt="Cerveza tirada">
+        </div>
+      </div>
+    </div>
+    
+
+    <!--Imagen 11-->
+    <div tabindex="-1" aria-labelledby="modalImage11" aria-hidden="true" class="modal fade" id="modalImage11">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/localfull.jpg" alt="Local McFly">
+        </div>
+      </div>
+    </div>    
+
+    <!--Imagen 12-->
+    <div tabindex="-1" aria-labelledby="modalImage12" aria-hidden="true" class="modal fade" id="modalImage12">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/cafe.png" alt="cafe">
+        </div>
+      </div>
+    </div>   
+    
+    <!--Imagen 13-->
+    <div tabindex="-1" aria-labelledby="modalImage13" aria-hidden="true" class="modal fade" id="modalImage13">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/trago.png" alt="trago">
+        </div>
+      </div>
+    </div>   
+    
+    <!--Imagen 14-->
+    <div tabindex="-1" aria-labelledby="modalImage14" aria-hidden="true" class="modal fade" id="modalImage14">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/local2.png" alt="Local McFly">
+        </div>
+      </div>
+    </div>   
+    
+    <!--Imagen 15-->
+    <div tabindex="-1" aria-labelledby="modalImage15" aria-hidden="true" class="modal fade" id="modalImage15">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <img src="../img/galeria/miniaturas/waffles.png" alt="waffles">
+        </div>
+      </div>
+    </div>   
+    
+    <!--Fin galeria Modal-->
     <footer>
       <div class="row">
           <!--Footer con sección de contacto,ubicación y redes sociales.-->
