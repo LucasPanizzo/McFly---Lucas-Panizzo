@@ -223,6 +223,26 @@ footer{
     width: 100%;
     grid-area: derechos;
 }
+@media screen and (max-width:1000px){
+    .footer__contactos--titulo{
+        font-size: 1.7rem;
+    }
+    .footer__contactos--texto--titulo{
+        font-size: 1.2rem;
+    }
+    .footer__contactos--texto--p{
+        font-size: 1rem;
+    }
+    .footer__mcfly--img{
+        height: 7rem;
+    }
+    .footer__redes--titulo{
+        font-size: 1.7rem;
+    }
+    .footer__redes i{
+        font-size: 70px;
+    }
+}
 /*------------------------------------------INDEX STYLE---------------------------------------------*/
 /*Marco el color de fondo del body y centro todos los elementos.Doy formato a las fuentes de los titulos.*/
 body{
@@ -586,11 +606,11 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     flex-wrap: nowrap;
     border: 2px solid #fe0000;
     border-radius: 35px;
-    height: 400px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.822);
     transition-property: all;
     transition-duration: 0.5s;
@@ -604,7 +624,7 @@ body{
     }
 }
 .menuMF__burgers--card--img{
-    width: 80%;
+    width: 70%;
 }
 .menuMF__burgers--card--titulo{
     font-size: 2rem;
@@ -612,6 +632,7 @@ body{
     color: #fe0000;
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
+    margin: 5px;
 }
 .menuMF__burgers--card--texto{
     font-size: 1.1rem;
@@ -873,6 +894,9 @@ body{
     }
     .local__cuerpo--card img{
         width: 100%;
+    }
+    .local__cuerpo--card iframe{
+        height: 300px;
     }
 }
 /*--------------------------------------------------------------galeria style------------------------------------------------*/
