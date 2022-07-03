@@ -1,0 +1,85 @@
+/*------------------------------------------------FOOTER STYLE---------------------------------------------*/
+//Declaraciones generales para el latout del footer
+footer{
+    color: white;
+    background-color: rgb(22, 21, 21);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    width: 100%;
+}
+.footer{
+    &__mcfly{
+        //Resumen de la página
+        margin-top: 10px;
+        margin-bottom: 15px; 
+        font-family: 'Oswald', sans-serif; 
+        font-weight: 200;
+        width: 100%;
+        color: rgba(171, 175, 179, 0.87);
+        text-align: center; 
+        grid-area:mcfly;
+        align-self: center;
+        &--img{
+            height: 10rem;
+            @include tablet{
+                height: 7rem;
+            }
+        }
+    }
+    &__contactos{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        grid-area:contacto;
+        text-align: center;
+        &--titulo{
+            /*Centro y doy formato al texto*/
+            text-align: center;
+            font-size: 2rem; 
+            @include tablet{
+                font-size: 1.7rem;
+            }
+        }
+        &--texto--titulo{
+            font-size: 1.5rem;
+            @include tablet{
+                font-size: 1.2rem;
+            }
+        }
+        &--texto--p{
+            font-size: 1rem;
+            color: rgba(171, 175, 179, 0.87);
+            @include tablet{
+                font-size: 1rem;
+            }
+        }
+    }
+    &__redes{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        text-align: center;
+        grid-area: redes;
+        &--titulo{
+            font-size: 2rem;
+            @include tablet{
+                font-size: 1.7rem;
+            }
+        }
+        & i{
+            font-size: 100px;
+            margin: 5px;
+            @include tablet{
+                font-size: 70px;
+            }
+            &:hover{
+                color: #fe0000;
+            }
+        }
+    }
+    //Sección de derechos de autor con estilo distinto al resto del footer
+    &__derechos{
+        text-align: center;
+        background-color: black;
+        width: 100%;
+        grid-area: derechos;
+    }
+}

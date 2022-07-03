@@ -1,0 +1,329 @@
+/*-------------------------------------MENÚ STYLE--------------------------------------*/
+.menuMF{
+    color: white;
+    //Configuración del titulo principal
+    &__titulo{
+        background-color: rgb(27,27,27);
+        margin-top: 70px;
+        padding-bottom: 15px;
+        text-align: center;
+        color: #fe0000;
+        font-size: 5rem; 
+        font-family: 'harlow', sans-serif;
+        @include phone{
+            margin-top: 25px;
+            padding-bottom: 5px;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        @include tablet{
+            margin-top: 25px;
+        }
+    }
+    &__img{
+        width: 100%;
+        @include phone{
+            display: none;
+        }
+    }
+    //Agrego una especie de NAV con imagenes, para llegar a las distintas partes del menú
+    &__tarjetas{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        @include phone{
+            display: none;
+        }
+        @include tablet{
+            flex-direction: column;
+            gap: 20px;
+        }
+        &--titulo{
+            color: #fe0000;
+            font-size: 3rem;
+            background-color: rgba(0, 0, 0, 0.40);
+            width: 100%;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+        }
+        //Doy estilo a las tarjetas del menu navegable con clases distintas para aplicar los fondos
+        &--cardMenu{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 35px;
+            background-image: url(../img/menu/menuilus.jpg);
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            transition-property: all;
+            transition-duration: 0.5s;
+            @include desktop{
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                }
+            }
+            @include tablet{
+                width: 60%;
+            }
+        }
+        &--cardBurgers{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 35px;
+            background-image: url(../img/menu/hamburguesas.jpg);
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: all;
+            transition-duration: 0.5s;
+            @include desktop{
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                }
+            }
+            @include tablet{
+                width: 60%;
+            }
+        }
+        &--cardExtras{
+            height: 400px;
+            width: 400px;
+            border: 2px solid black;
+            border-radius: 35px;
+            background-image: url(../img/menu/otros.jpg);
+            background-size: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition-property: all;
+            transition-duration: 0.5s;
+            @include desktop{
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                }
+            }
+            @include tablet{
+                width: 60%;
+            }
+        }
+    }
+    //Configuración del menu completo
+    &__menuCompleto{
+        margin-top: 75px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        flex-wrap: wrap;
+        & img{
+            width: 25%;
+            border: 1px solid #fe0000;
+            border-radius: 35px;
+            transition-property: all;
+            transition-duration: 0.5s;
+            @include phone{
+                width: 80%;
+            }
+            @include tablet{
+                width: 80%;
+                border-radius: 55px;
+            }
+            @include desktop{
+                &:hover{
+                    transform: scale(1.1);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                }
+            }
+        }
+        &--titulo{
+            width: 100%;
+            color: #fe0000;
+            text-align: center;
+            font-size: 3.5rem; 
+            font-family: 'harlow', sans-serif;
+            margin-bottom: 20px;
+            @include phone{
+                font-size: 2.5rem;
+                margin-bottom: 5px;
+            }
+        }
+        @include phone{
+            margin-top: 25px;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        @include tablet{
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+    }
+    &__burgers{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100px, repeat(3,1fr);
+        grid-template-areas: "titulo titulo titulo";
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 100%;
+        margin-bottom: 25px;
+        @include phone{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &--titulo{
+            grid-area: titulo;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: 75px;
+            color: #fe0000;
+            font-size: 5rem; 
+            font-family: 'harlow', sans-serif;
+            @include phone{
+                font-size: 4rem;
+                margin-top: 25px;
+            }
+            @include tablet{
+                margin-top: 20px;
+            }
+        }
+        &--card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 90%;
+            flex-wrap: nowrap;
+            border: 2px solid #fe0000;
+            border-radius: 35px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.822);
+            transition-property: all;
+            transition-duration: 0.5s;
+            @include phone{
+                height: fit-content;
+                padding: 15px;
+            }
+            @include desktop{
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                }
+            }
+            &--img{
+                width: 70%;
+            }
+            &--titulo{
+                font-size: 2rem;
+                text-align: center;
+                color: #fe0000;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 400;
+                margin: 5px;
+            }
+            &--texto{
+                font-size: 1.1rem;
+                margin: 5px;
+                margin-bottom: 3%;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 300;
+                text-align: center;
+                font-style: italic;
+            }
+        }
+    }
+    //Galeria con cosas extras del menú
+    &__extras{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 25px;
+        justify-content: center;
+        align-items: center;
+        &--titulo{
+            width: 100%;
+            text-align: center;
+            margin-top: 75px;
+            padding-bottom: 25px;
+            text-align: center;
+            color: #fe0000;
+            font-size: 5rem; 
+            font-family: 'harlow', sans-serif;
+            @include tablet{
+                margin-top: 25px;
+                font-size: 4rem;
+            }
+        }
+        &--carousel{
+            width: 80%;
+            justify-self: center;
+            @include desktop{
+                display: none;
+            }
+        }
+        //Configuración de la galeria para la versión desktop
+        &--galeria{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-auto-rows: 2;
+            align-items: flex-end;
+            grid-template-areas: "img1 img3 img4 img6"
+                                 "img2 img3 img5 img6"; 
+            @include tablet{
+                display: none;
+            }
+            & img{
+                width: 95%;
+                border: 1px black solid;
+                @include desktop{
+                    &:hover{
+                        transform: scale(1.2);
+                        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                    }
+                }
+            }
+            &--img1{
+                grid-area: img1;
+            }
+            &--img2{
+                grid-area: img2;
+            }
+            &--img3{
+                grid-area: img3;
+            }
+            &--img4{
+                grid-area: img4;
+            }
+            &--img5{
+                grid-area: img5;
+            }
+            &--img6{
+                grid-area: img6;
+            }
+        }
+    }
+}
+#mosaicoMenuCompleto{
+    @include phone{
+        display: none;
+    }
+}

@@ -1,0 +1,40 @@
+//Declaraciones generales de estilo
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+//Modifico el color del body en todas las páginas
+body{
+    background-color: rgb(27,27,27);
+}
+//Fuente añadida desde el servidor ya que no encontré ninguna parecida
+@font-face {
+    font-family: harlow;
+    src: url(../fonts/harlow-solid-plane.otf);
+}
+//Agrego un mosaico con un div generico para darle estilo a la página
+.mosaico{
+    background-image: url(../img/mosaico-nav.png); 
+    height: 32px; 
+}
+/*Reinicio ciertas declaraciones de bootstrap que no me gustan*/
+p{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    font-weight: 600;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}

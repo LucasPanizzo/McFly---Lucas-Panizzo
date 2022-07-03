@@ -1,938 +1,765 @@
-/*Declaraciones generales de estilo*/
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-a{
-    text-decoration: none;
-    color: white;
+
+a {
+  text-decoration: none;
+  color: white;
 }
-/*Fuente añadida desde el servidor ya que no encontré ninguna parecida*/
+
+body {
+  background-color: rgb(27, 27, 27);
+}
+
 @font-face {
-    font-family: harlow;
-    src: url(../fonts/harlow-solid-plane.otf);
+  font-family: harlow;
+  src: url(../fonts/harlow-solid-plane.otf);
 }
-/*Agrego un mosaico con un div generico para darle estilo a la página*/
-.mosaico{
-    background-image: url(../img/mosaico-nav.png); 
-    height: 32px; 
+.mosaico {
+  background-image: url(../img/mosaico-nav.png);
+  height: 32px;
 }
+
 /*Reinicio ciertas declaraciones de bootstrap que no me gustan*/
-p{
-    margin: 0;
-    padding: 0;
+p {
+  margin: 0;
+  padding: 0;
 }
-h1,h2,h3,h4,h5,h6{
-    margin: 0;
-    padding: 0;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
 }
-.titulo{
-    font-weight: 600;
+
+.titulo {
+  font-weight: 600;
 }
-.row{
-    padding: 0;
-    margin: 0;
+
+.row {
+  padding: 0;
+  margin: 0;
 }
+
 /*-------------------------------------------HEADER STYLE-------------------------------------------------*/
-/*Agrego una sección previa al header que contiene información de la página*/
-.preHeader{
-    background-color: rgb(0, 0, 0);
-    color:white;
-    height: 32px;
-    display: flex;
-    width: 100%;
-    justify-content:space-between;
-    align-items: center;
+.preHeader {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  height: 32px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
-.preHeaderData{
-    display: flex;
-    align-items: center;
+@media screen and (max-width: 1000px) {
+  .preHeader {
+    display: none;
+  }
 }
-.preHeader__p{
-    font-size: 0.8rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-style: italic;
-    color: rgb(211, 211, 211);
-    margin-top: 5px;
-    margin-left: 5px;
+.preHeaderData {
+  display: flex;
+  align-items: center;
 }
-.preHeaderData i{
-    font-size: 1rem;
-    margin-left: 20px; 
-    color: rgb(211, 211, 211);
+.preHeaderData i {
+  font-size: 1rem;
+  margin-left: 20px;
+  color: rgb(211, 211, 211);
 }
-.preHeader__rs{
-    margin-right: 50px;
+.preHeader__p {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  color: rgb(211, 211, 211);
+  margin-top: 5px;
+  margin-left: 5px;
 }
-.preHeader__rs i{
-    font-size: 1.3rem;
-    margin-top: 5px;
-    margin-right: 25px;
-    color: rgb(211, 211, 211);
+.preHeader__rs {
+  margin-right: 50px;
 }
-.preHeader__rs i:hover{
-    color: #fe0000;
+.preHeader__rs i {
+  font-size: 1.3rem;
+  margin-top: 5px;
+  margin-right: 25px;
+  color: rgb(211, 211, 211);
 }
-/*oculto la sección del preheader para las versiones de menos de 1000px*/
-@media screen and (max-width:1000px){
-    .preHeader{
-        display: none;
-    }
+.preHeader__rs i:hover {
+  color: #fe0000;
 }
-/*Configuro un header con un nav sticky(solo en la versión para mas de 1000px).*/
-@media screen and (min-width:1001px){
-    header{
-        background-color: rgb(27, 27, 27);
-        position: sticky;
-        top: 0px; 
-        z-index: 2; 
-    }
-}
-.header__imagen{
-    background-color: rgb(27, 27, 27); 
-    height: 100px;  
-    margin-top: 5px; 
-    margin-bottom: 5px;
-}
-header{
-    background-color: hsla(0, 0%, 11%, 0.);
 
+header {
+  background-color: hsl(0deg, 0%, 11%);
 }
-/*Modifico ciertas cuestiones del nav para adjustarlo al responsive*/
-@media screen and (max-width:1000px){
-    .header__imagen{
-        height: 100px;
-        margin-top: 10px;
-    }
-    .navbar-nav{
-        text-align: center;
-    }
+@media screen and (min-width: 1001px) {
+  header {
+    background-color: rgb(27, 27, 27);
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
 }
-nav ul{
-    gap: 25px;
-    color: white;
-}
-nav ul li{
-    /*Configuración del nav.*/
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-}
-/*Configuración full responsive del NAV*/
-@media screen and (max-width:1000px){
-    nav ul li{
-        font-size: 1.7rem;
-    }
-}
-@media screen and (max-width:700px){
-    nav ul{
-        gap: 5px;
-    }
-    nav ul li{
-        font-size: 1.5rem;
-    }
-}
-.nav-link{
-    color: white;
-    padding: 0;
-}
-@media screen and (min-width:1000px){
-    .nav-link:hover{
-        color: #fe0000;
-        border-top: solid 2px #fe0000;
-    }
-}
-.activo{
-    color: #fe0000;
-}
-.activo:hover{
-    color: white;
-}
-@media screen and (min-width:1000px){
-    .navbar,.header{
-        height: 110px;
-    }
-}
-.navbar__icon{
-    width: 30px;
-}
-/*------------------------------------------------FOOTER STYLE---------------------------------------------*/
-footer{
-    /*Se define como blanco el color de las letras en el footer, y como negro el fondo general.Añado formato a las fuentes. Aplico un grid para el posicionamiento del footer*/
-    color: white;
-    background-color: rgb(22, 21, 21);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 200;
-    width: 100%;
-}
-/*Modifico el display a flex para la versión de menos de 1000px*/
-.footer__mcfly{
-    /*Resumen de la página*/
-    margin-top: 10px;
-    margin-bottom: 15px; 
-    font-family: 'Oswald', sans-serif; 
-    font-weight: 200;
-    width: 100%;
-    color: rgba(171, 175, 179, 0.87);
-    text-align: center; 
-    grid-area:mcfly;
-    align-self: center;
-}
-.footer__mcfly--img{
-    height: 10rem;
-}
-.footer__contactos{
-    margin-top: 10px;
-    margin-bottom: 15px;
-    grid-area:contacto;
-    text-align: center;
-}
-.footer__contactos--titulo{
-    /*Centro y doy formato al texto*/
-    text-align: center;
-    font-size: 2rem; 
-}
-.footer__contactos--texto--titulo{
-    font-size: 1.5rem;
-}
-.footer__contactos--texto--p{
-    font-size: 1rem;
-    color: rgba(171, 175, 179, 0.87);
-}
-.footer__redes{
-    margin-top: 10px;
-    margin-bottom: 15px;
-    text-align: center;
-    grid-area: redes;
-}
-.footer__redes--titulo{
-    font-size: 2rem;
-}
-.footer__redes i{
-    font-size: 100px;
-    margin: 5px;
-}
-.footer__redes i:hover{
-    color: #fe0000;
-}
-/*Sección de derechos de autor con estilo distinto al resto del footer.*/
-.footer__derechos{
-    text-align: center;
-    background-color: black;
-    width: 100%;
-    grid-area: derechos;
-}
-@media screen and (max-width:1000px){
-    .footer__contactos--titulo{
-        font-size: 1.7rem;
-    }
-    .footer__contactos--texto--titulo{
-        font-size: 1.2rem;
-    }
-    .footer__contactos--texto--p{
-        font-size: 1rem;
-    }
-    .footer__mcfly--img{
-        height: 7rem;
-    }
-    .footer__redes--titulo{
-        font-size: 1.7rem;
-    }
-    .footer__redes i{
-        font-size: 70px;
-    }
-}
-/*------------------------------------------INDEX STYLE---------------------------------------------*/
-/*Marco el color de fondo del body y centro todos los elementos.Doy formato a las fuentes de los titulos.*/
-body{
-    background-color: rgb(27,27,27);
-}
-.mainIndex{
-    text-align: center;
-    color: #fe0000;
-    font-family: 'harlow', sans-serif;
-}
-/*Configuro la caja del titulo principal.*/
-.mainIndex__intro--titulo{
-    background-color: rgb(27,27,27);
-    margin-top: 70px;
-    padding-bottom: 15px;
-    font-size: 4rem; 
-}
-/*Modifico la fuente del titulo para que sea responsive*/
-@media screen and (max-width:700px){
-    .mainIndex__intro--titulo{
-        font-size: 2.5rem;
-        margin-top: 25px;
-    }
-}
-@media screen and (max-width:1000px){
-    .mainIndex__intro--titulo{
-        margin-top: 25px;
-    }
-}
-.mainIndex__intro--articulo{
-    padding-bottom: 25px;
-    padding-top: 25px;
-    background-color: #fe0000;
-}
-.mainIndex__intro--articulo--video{
-    width: 70%;
-}
-/*Modifico el tamaño del vídeo en la pantalla con media queries*/
-@media screen and (max-width:1000px){
-    .mainIndex__intro--articulo--video{
-        width: 100%;
-    }
-}
-/*Diseño de la sección de información.*/
-.mainIndex__info{
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-.mainIndex__info--art{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
-}
-.mainIndex__info--art img{
-    width: 60%;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
 
-    .mainIndex__info--art img:hover{
-        transform: scale(1.1);
+.header__imagen {
+  background-color: rgb(27, 27, 27);
+  height: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
-}
-.mainIndex__info--art p{
-    padding-top: 10px;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: white;
-    width: 65%;
-    font-family: 'Oswald', sans-serif;
-}
-@media screen and (max-width:700px){
-    .mainIndex__info--art img{
-        width: 60%;
-    }
-    .mainIndex__info--art p{
-        font-size: 0.8rem;
-        width: 85%;
-        padding-bottom: 10px;
-    }
-}
-@media screen and (max-width:1000px){
-    .mainIndex__info--art{
-        margin-top: 30px;
-    }
-}
-/*Configuro la caja de la sección de pedidos*/
-.mainIndex__pedidos{
-     background-color: rgb(27, 27, 27);
-     padding-bottom: 30px;
-     padding-top: 15px;
-}
-/*Formato de las cajas y tamaño de las imagenes.*/
-.mainIndex__pedidos--titulo{
-    padding-top: 15px; 
-    padding-bottom: 15px;
-    font-size: 4rem; 
-}
-/*Modifico la fuente del titulo para la version mobile*/
-@media screen and (max-width:700px){
-    .mainIndex__pedidos--titulo{
-        font-size: 2.7rem;
-        margin-top: 0px;
-    }
-    .mainIndex__pedidos{
-        padding-top: 5px;
-    }
-}
-.mainIndex__pedidos--cajaimg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px;
-    margin-top: 20px;
-}
-.mainIndex__pedidos--cajaimg--img{
+@media screen and (max-width: 1000px) {
+  .header__imagen {
     height: 100px;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
-
-    .mainIndex__pedidos--cajaimg--img:hover{
-        transform: scale(1.5);
-}
-}
-/*Tamaño modificado de las imagenes para la version mobile*/
-@media screen and (max-width:700px){
-    .mainIndex__pedidos--cajaimg--img{
-        height: 70px;
-    }
-    .mainIndex__pedidos--cajaimg{
-        gap: 55px;
-    }
-}
-/*-------------------------------------MENÚ STYLE--------------------------------------*/
-.menuMF{
-    color: white;
-}
-/*Configuro la caja del titulo principal.*/
-.menuMF__titulo{
-    background-color: rgb(27,27,27);
-    margin-top: 70px;
-    padding-bottom: 15px;
-    text-align: center;
-    color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
-}
-.menuMF__img{
-    width: 100%;
-}
-/*Cambio el tamaño del titulo y oculto la imagen para la versión mobile*/
-@media screen and (max-width:700px){
-    .menuMF__titulo{
-        margin-top: 25px;
-        padding-bottom: 5px;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-    }
-    .menuMF__img{
-        display: none;
-    }
-}
-@media screen and (max-width:1000px){
-    .menuMF__titulo{
-        margin-top: 25px;
-    }
-}
-/*Agrego una especie de NAV con imagenes, para llegar a las distintas partes del menú.*/
-.menuMF__tarjetas{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-/*Doy estilo a las tarjetas del menu navegable con clases distintas para aplicar los fondos*/
-.menuMF__tarjetas--titulo{
-    color: #fe0000;
-    font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.40);
-    width: 100%;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-}
-.menuMF__tarjetas--cardMenu{
-    height: 400px;
-    width: 400px;
-    border: 2px solid black;
-    border-radius: 35px;
-    background-image: url(../img/menu/menuilus.jpg);
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-.menuMF__tarjetas--cardBurgers{
-    height: 400px;
-    width: 400px;
-    border: 2px solid black;
-    border-radius: 35px;
-    background-image: url(../img/menu/hamburguesas.jpg);
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-.menuMF__tarjetas--cardExtras{
-    height: 400px;
-    width: 400px;
-    border: 2px solid black;
-    border-radius: 35px;
-    background-image: url(../img/menu/otros.jpg);
-    background-size: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
-
-    .menuMF__tarjetas--cardMenu:hover{
-        transform: scale(1.05);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-    }
-    .menuMF__tarjetas--cardBurgers:hover{
-        transform: scale(1.05);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-    }
-    .menuMF__tarjetas--cardExtras:hover{
-        transform: scale(1.05);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-    }
-}
-/*Oculto el nav para la versión mobile, no me gusta como se adapta*/
-@media screen and (max-width:700px){
-    .menuMF__tarjetas{
-        display: none;
-    }
-    #mosaicoMenuCompleto{
-        display: none;
-    }
-}
-/*Modifico la dirección del display flex para hacerlo responsive.*/
-@media screen and (max-width:1000px){
-    .menuMF__tarjetas{
-        flex-direction: column;
-        gap: 20px;
-    }
-    .menuMF__tarjetas--cardBurgers,.menuMF__tarjetas--cardExtras,.menuMF__tarjetas--cardMenu{
-        width: 60%;
-    }
-}
-/*Configuro las imagenes del menú completo*/
-.menuMF__menuCompleto{
-    margin-top: 75px;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.menuMF__menuCompleto img{
-    width: 25%;
-    border: 1px solid #fe0000;
-    border-radius: 35px;
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
-
-    .menuMF__menuCompleto img:hover{
-        transform: scale(1.1);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-    }
-}
-.menuMF__menuCompleto--titulo{
-    width: 100%;
-    color: #fe0000;
-    text-align: center;
-    font-size: 3.5rem; 
-    font-family: 'harlow', sans-serif;
-    margin-bottom: 20px;
-}
-/*Modifico el tamaño y posicionamiento de las imagenes para las versiones de menor resolución.*/
-@media screen and (max-width:700px){
-    .menuMF__menuCompleto{
-        margin-top: 25px;
-        flex-direction: column;
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-    .menuMF__menuCompleto--titulo{
-        font-size: 2.5rem;
-        margin-bottom: 5px;
-    }
-    .menuMF__menuCompleto img{
-        width: 80%;
-    }
-}
-@media screen and (max-width:1000px){
-    .menuMF__menuCompleto{
-        flex-direction: column;
-        gap: 20px;
-        margin-top: 25px;
-        margin-bottom: 25px;
-    }
-    .menuMF__menuCompleto img{
-        width: 80%;
-        border-radius: 55px;
-    }
-}
-/*Agrego una sección para ver las hamburguesas*/
-.menuMF__burgers{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 100px, repeat(3,1fr);
-    grid-template-areas: "titulo titulo titulo";
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    width: 100%;
-    margin-bottom: 25px;
-}
-.menuMF__burgers--titulo{
-    grid-area: titulo;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-top: 75px;
-    color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
-}
-@media screen and (max-width:1000px){
-    .menuMF__burgers--titulo{
-        margin-top: 20px;
-    }
-}
-/*Configuro las tarjetas de las hamburguesas, con sus titulos, textos e imagenes.*/
-.menuMF__burgers--card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 90%;
-    flex-wrap: nowrap;
-    border: 2px solid #fe0000;
-    border-radius: 35px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.822);
-    transition-property: all;
-    transition-duration: 0.5s;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
-
-    .menuMF__burgers--card:hover{
-        transform: scale(1.05);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-    }
-}
-.menuMF__burgers--card--img{
-    width: 70%;
-}
-.menuMF__burgers--card--titulo{
-    font-size: 2rem;
-    text-align: center;
-    color: #fe0000;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    margin: 5px;
-}
-.menuMF__burgers--card--texto{
-    font-size: 1.1rem;
-    margin: 5px;
-    margin-bottom: 3%;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    text-align: center;
-    font-style: italic;
-
-}
-/*Configuro la sección de hamburguesas para que sea responsive.*/
-@media screen and (max-width:700px){
-    .menuMF__burgers{
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .menuMF__burgers--titulo{
-        font-size: 4rem;
-        margin-top: 25px;
-    }
-    .menuMF__burgers--card{
-        height: fit-content;
-        padding: 15px;
-    }
-}
-/*Galería con el resto de cosas del menú*/
-.menuMF__extras{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 25px;
-    justify-content: center;
-    align-items: center;
-}
-.menuMF__extras--titulo{
-    width: 100%;
-    text-align: center;
-    margin-top: 75px;
-    padding-bottom: 25px;
-    text-align: center;
-    color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
-}
-/*Configuarción del carousel*/
-.menuMF__extras__carousel{
-    width: 25%;
-    justify-self: center;
-}
-/*Oculto el carousel para la versión desktop*/
-@media screen and (min-width:1000px){
-    .menuMF__extras__carousel{
-        display: none;
-    }
-}
-/*Configuro la galería para la versión desktop con un grid.*/
-.menuMF__extras__galeria{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-auto-rows: 2;
-    align-items: flex-end;
-    grid-template-areas: "img1 img3 img4 img6"
-                         "img2 img3 img5 img6";                     
-}
-.menuMF__extras__galeria img{
-    width: 95%;
-    border: 1px black solid;
-}
-.menuMF__extras__galeria__img1{
-    grid-area: img1;
-}
-.menuMF__extras__galeria__img2{
-    grid-area: img2;
-}
-.menuMF__extras__galeria__img3{
-    grid-area: img3;
-}.menuMF__extras__galeria__img4{
-    grid-area: img4;
-}
-.menuMF__extras__galeria__img5{
-    grid-area: img5;
-}
-.menuMF__extras__galeria__img6{
-    grid-area: img6;
-}
-/*Agrego un efecto mediante animaciones con un hover*/
-@media screen and (min-width:1000px){
-
-    .menuMF__extras__galeria img:hover{
-        transform: scale(1.2);
-        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-
-    }
-}
-/*Oculto la galería grid para las versiones de menos de 1000px*/
-@media screen and (max-width:1000px){
-    .menuMF__extras--titulo{
-        margin-top: 20px;
-    }
-    .menuMF__extras__galeria{
-        display: none;
-    }
-}
-/*Modifico el tamaño de las imagenes y del titulo*/
-@media screen and (max-width:1000px){
-    .menuMF__extras--titulo{
-        margin-top: 25px;
-        font-size: 4rem;
-    }
-    .carousel{
-        width: 80%;
-    }
-}
-/*---------------------------------------------CONTACTO STYLE----------------------------------------------*/
-.contacto__titulo{
-    text-align: center;
-    margin-top: 65px;
-    padding-bottom: 25px;
-    text-align: center;
-    color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
-}
-/*Modifico los titulos y sus margenes para menor res.*/
-@media screen and (max-width:700px){
-    .contacto__titulo{
-        margin-top: 25px;
-        font-size: 3rem;
-    }
-}
-@media screen and (max-width:1000px){
-    .contacto__titulo{
-        margin-top: 25px;
-    }
-}
-/*Configuro el formulario en un flex column para ordenarlo, doy estilo a los label y al input*/
-.contacto__form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin: 20px;
-}
-.contacto__form--label{
-    color: white;
-    font-size: 2rem;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-}
-.contacto__form--input{
-    height: 2rem;
-    width: 35%;
-    background-color: #470202;
-    color: white;
-}
-@media screen and (max-width:700px){
-    .contacto__form--label{
-        font-size: 1.5rem;
-    }
-    .contacto__form--input{
-        width: 85%;
-    }
-}
-/*----------------------------------------NUESTRO LOCAL STYLE----------------------------------------------*/
-.local__titulo{
-    text-align: center;
-    margin-top: 65px;
-    padding-bottom: 25px;
-    text-align: center;
-    color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
-}
-/*Modifico los titulos y sus margenes para menor res.*/
-@media screen and (max-width:700px){
-    .local__titulo{
-        font-size: 3rem;
-        margin-top: 25px;
-        padding-bottom: 15px;
-    }
-}
-@media screen and (max-width:1000px){
-    .local__titulo{
-        margin-top: 25px;
-    }
-}
-/*Configuro un display grid para el cuerpo de esta página*/
-.local__cuerpo{
-    width: 98vw;
-    margin-top: 25px;
-    margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    row-gap: 25px;
-
-}
-/*Cambio el display a flex para ordenarlo de manera unidimensional.*/
-@media screen and (max-width:1000px){
-    .local__cuerpo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-        width: 100vw;
-        row-gap: 0px;
-    }
-}
-/*Doy formato mediante tarjetas a todas las secciones de la página mediante display flex, en un futuro cambiaré las fuentes.*/
-.local__cuerpo--card{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 500px;
-    padding: 25px 40px;
-}
-.local__cuerpo--card--titulo{
-    font-size: 3.5rem;
-    color: #fe0000;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.local__cuerpo--card--texto{
-    font-size: 1.2rem;
     margin-top: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
+  }
+}
+
+.navbar-nav {
+  gap: 25px;
+  color: white;
+}
+@media screen and (max-width: 1000px) {
+  .navbar-nav {
     text-align: center;
-    font-style: italic;
-    color: white;
+  }
 }
-.local__cuerpo--card--img{
-   height: 80%;
-   width: 100%;
+@media screen and (max-width: 700px) {
+  .navbar-nav {
+    gap: 5px;
+  }
 }
-/*Adapto la sección para que sea responsive.*/
-@media screen and (max-width:700px){
-    .local__cuerpo--card{
-        padding: 0px 10px;
-        height: fit-content;
-    }
-    .local__cuerpo--card--img{
-        width: 100%;
-        height: fit-content;
-    }
-    .local__cuerpo--card--titulo{
-        font-size: 2rem;
-    }
+
+.nav-item {
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
-@media screen and (max-width:1000px){
-    .local__cuerpo--card{
-        height: fit-content;
-    }
-    .local__cuerpo--card img{
-        width: 100%;
-    }
-    .local__cuerpo--card iframe{
-        height: 300px;
-    }
+@media screen and (max-width: 1000px) {
+  .nav-item {
+    font-size: 1.7rem;
+  }
 }
-/*--------------------------------------------------------------galeria style------------------------------------------------*/
-.galeria{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 20px;
-    justify-content: center;
+@media screen and (max-width: 700px) {
+  .nav-item {
+    font-size: 1.5rem;
+  }
 }
-.galeria img{
-    width: 300px;
-    height: 300px;
+
+.nav-link {
+  color: white;
+  padding: 0;
 }
-.modal-content img{
-    max-height: 92vh;
-}
-.galeria__titulo{
-    text-align: center;
-    margin-top: 65px;
-    padding-bottom: 25px;
-    text-align: center;
+@media screen and (min-width: 1001px) {
+  .nav-link:hover {
     color: #fe0000;
-    font-size: 5rem; 
-    font-family: 'harlow', sans-serif;
+    border-top: solid 2px #fe0000;
+  }
 }
-/*Modifico los titulos y sus margenes para menor res.*/
-@media screen and (max-width:700px){
-    .galeria__titulo{
-        font-size: 3rem;
-        margin-top: 25px;
-        padding-bottom: 15px;
-    }
+
+.activo {
+  color: #fe0000;
 }
-@media screen and (max-width:1000px){
-    .galeria__titulo{
-        margin-top: 25px;
-    }
+.activo:hover {
+  color: white;
 }
+
+.navbar__icon {
+  width: 30px;
+}
+
+@media screen and (min-width: 1001px) {
+  .header, .navbar {
+    height: 110px;
+  }
+}
+
+/*------------------------------------------------FOOTER STYLE---------------------------------------------*/
+footer {
+  color: white;
+  background-color: rgb(22, 21, 21);
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  width: 100%;
+}
+
+.footer__mcfly {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 200;
+  width: 100%;
+  color: rgba(171, 175, 179, 0.87);
+  text-align: center;
+  grid-area: mcfly;
+  align-self: center;
+}
+.footer__mcfly--img {
+  height: 10rem;
+}
+@media screen and (max-width: 1000px) {
+  .footer__mcfly--img {
+    height: 7rem;
+  }
+}
+.footer__contactos {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  grid-area: contacto;
+  text-align: center;
+}
+.footer__contactos--titulo {
+  /*Centro y doy formato al texto*/
+  text-align: center;
+  font-size: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .footer__contactos--titulo {
+    font-size: 1.7rem;
+  }
+}
+.footer__contactos--texto--titulo {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 1000px) {
+  .footer__contactos--texto--titulo {
+    font-size: 1.2rem;
+  }
+}
+.footer__contactos--texto--p {
+  font-size: 1rem;
+  color: rgba(171, 175, 179, 0.87);
+}
+@media screen and (max-width: 1000px) {
+  .footer__contactos--texto--p {
+    font-size: 1rem;
+  }
+}
+.footer__redes {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  grid-area: redes;
+}
+.footer__redes--titulo {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .footer__redes--titulo {
+    font-size: 1.7rem;
+  }
+}
+.footer__redes i {
+  font-size: 100px;
+  margin: 5px;
+}
+@media screen and (max-width: 1000px) {
+  .footer__redes i {
+    font-size: 70px;
+  }
+}
+.footer__redes i:hover {
+  color: #fe0000;
+}
+.footer__derechos {
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  grid-area: derechos;
+}
+
+/*------------------------------------------INDEX STYLE---------------------------------------------*/
+.mainIndex {
+  text-align: center;
+  color: #fe0000;
+  font-family: "harlow", sans-serif;
+}
+.mainIndex__intro--titulo {
+  background-color: rgb(27, 27, 27);
+  margin-top: 70px;
+  padding-bottom: 15px;
+  font-size: 4rem;
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__intro--titulo {
+    font-size: 2.5rem;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mainIndex__intro--titulo {
+    margin-top: 25px;
+  }
+}
+.mainIndex__intro--articulo {
+  padding-bottom: 25px;
+  padding-top: 25px;
+  background-color: #fe0000;
+}
+.mainIndex__intro--articulo--video {
+  width: 70%;
+}
+@media screen and (max-width: 1000px) {
+  .mainIndex__intro--articulo--video {
+    width: 100%;
+  }
+}
+.mainIndex__info {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.mainIndex__info--art {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mainIndex__info--art img {
+  width: 60%;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 1001px) {
+  .mainIndex__info--art img:hover {
+    transform: scale(1.1);
+  }
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__info--art img {
+    width: 60%;
+  }
+}
+.mainIndex__info--art p {
+  padding-top: 10px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  color: white;
+  width: 65%;
+  font-family: "Oswald", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__info--art p {
+    font-size: 0.8rem;
+    width: 85%;
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .mainIndex__info--art {
+    margin-top: 30px;
+  }
+}
+.mainIndex__pedidos {
+  background-color: rgb(27, 27, 27);
+  padding-bottom: 30px;
+  padding-top: 15px;
+}
+.mainIndex__pedidos--titulo {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 4rem;
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__pedidos--titulo {
+    font-size: 2.7rem;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__pedidos {
+    padding-top: 5px;
+  }
+}
+.mainIndex__pedidos--cajaimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 20px;
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__pedidos--cajaimg {
+    gap: 55px;
+  }
+}
+.mainIndex__pedidos--cajaimg--img {
+  height: 100px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 1001px) {
+  .mainIndex__pedidos--cajaimg--img:hover {
+    transform: scale(1.5);
+  }
+}
+@media screen and (max-width: 700px) {
+  .mainIndex__pedidos--cajaimg--img {
+    height: 70px;
+  }
+}
+
+/*-------------------------------------MENÚ STYLE--------------------------------------*/
+.menuMF {
+  color: white;
+}
+.menuMF__titulo {
+  background-color: rgb(27, 27, 27);
+  margin-top: 70px;
+  padding-bottom: 15px;
+  text-align: center;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__titulo {
+    margin-top: 25px;
+    padding-bottom: 5px;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__titulo {
+    margin-top: 25px;
+  }
+}
+.menuMF__img {
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__img {
+    display: none;
+  }
+}
+.menuMF__tarjetas {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__tarjetas {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__tarjetas {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.menuMF__tarjetas--titulo {
+  color: #fe0000;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+.menuMF__tarjetas--cardMenu {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 35px;
+  background-image: url(../img/menu/menuilus.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__tarjetas--cardMenu:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__tarjetas--cardMenu {
+    width: 60%;
+  }
+}
+.menuMF__tarjetas--cardBurgers {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 35px;
+  background-image: url(../img/menu/hamburguesas.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__tarjetas--cardBurgers:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__tarjetas--cardBurgers {
+    width: 60%;
+  }
+}
+.menuMF__tarjetas--cardExtras {
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 35px;
+  background-image: url(../img/menu/otros.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__tarjetas--cardExtras:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__tarjetas--cardExtras {
+    width: 60%;
+  }
+}
+.menuMF__menuCompleto {
+  margin-top: 75px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.menuMF__menuCompleto img {
+  width: 25%;
+  border: 1px solid #fe0000;
+  border-radius: 35px;
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__menuCompleto img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__menuCompleto img {
+    width: 80%;
+    border-radius: 55px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__menuCompleto img:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+.menuMF__menuCompleto--titulo {
+  width: 100%;
+  color: #fe0000;
+  text-align: center;
+  font-size: 3.5rem;
+  font-family: "harlow", sans-serif;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__menuCompleto--titulo {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menuMF__menuCompleto {
+    margin-top: 25px;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__menuCompleto {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+.menuMF__burgers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px, repeat(3, 1fr);
+  grid-template-areas: "titulo titulo titulo";
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__burgers {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.menuMF__burgers--titulo {
+  grid-area: titulo;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__burgers--titulo {
+    font-size: 4rem;
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__burgers--titulo {
+    margin-top: 20px;
+  }
+}
+.menuMF__burgers--card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  flex-wrap: nowrap;
+  border: 2px solid #fe0000;
+  border-radius: 35px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.822);
+  transition-property: all;
+  transition-duration: 0.5s;
+}
+@media screen and (max-width: 700px) {
+  .menuMF__burgers--card {
+    height: fit-content;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__burgers--card:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+.menuMF__burgers--card--img {
+  width: 70%;
+}
+.menuMF__burgers--card--titulo {
+  font-size: 2rem;
+  text-align: center;
+  color: #fe0000;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  margin: 5px;
+}
+.menuMF__burgers--card--texto {
+  font-size: 1.1rem;
+  margin: 5px;
+  margin-bottom: 3%;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+}
+.menuMF__extras {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.menuMF__extras--titulo {
+  width: 100%;
+  text-align: center;
+  margin-top: 75px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__extras--titulo {
+    margin-top: 25px;
+    font-size: 4rem;
+  }
+}
+.menuMF__extras--carousel {
+  width: 80%;
+  justify-self: center;
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__extras--carousel {
+    display: none;
+  }
+}
+.menuMF__extras--galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 2;
+  align-items: flex-end;
+  grid-template-areas: "img1 img3 img4 img6" "img2 img3 img5 img6";
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__extras--galeria {
+    display: none;
+  }
+}
+.menuMF__extras--galeria img {
+  width: 95%;
+  border: 1px black solid;
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__extras--galeria img:hover {
+    transform: scale(1.2);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
+  }
+}
+.menuMF__extras--galeria--img1 {
+  grid-area: img1;
+}
+.menuMF__extras--galeria--img2 {
+  grid-area: img2;
+}
+.menuMF__extras--galeria--img3 {
+  grid-area: img3;
+}
+.menuMF__extras--galeria--img4 {
+  grid-area: img4;
+}
+.menuMF__extras--galeria--img5 {
+  grid-area: img5;
+}
+.menuMF__extras--galeria--img6 {
+  grid-area: img6;
+}
+
+@media screen and (max-width: 700px) {
+  #mosaicoMenuCompleto {
+    display: none;
+  }
+}
+
+/*---------------------------------------------CONTACTO STYLE----------------------------------------------*/
+
+/*# sourceMappingURL=style.css.map */

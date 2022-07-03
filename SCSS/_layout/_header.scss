@@ -1,0 +1,112 @@
+/*-------------------------------------------HEADER STYLE-------------------------------------------------*/
+//Agrego una sección previa al header que contiene información de la página.
+//Esta sección se muestra solo en la versión desktop.
+.preHeader{
+    background-color: rgb(0, 0, 0);
+    color:white;
+    height: 32px;
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items: center;
+    @include tablet{
+        display: none;
+    }
+
+    &Data{
+        display: flex;
+        align-items: center;
+
+        i{
+            font-size: 1rem;
+            margin-left: 20px; 
+            color: rgb(211, 211, 211);
+        }
+    }
+
+    &__p{
+        font-size: 0.8rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-style: italic;
+        color: rgb(211, 211, 211);
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+    &__rs{
+        margin-right: 50px;
+        i{
+            font-size: 1.3rem;
+            margin-top: 5px;
+            margin-right: 25px;
+            color: rgb(211, 211, 211);
+            &:hover{
+                color: #fe0000;
+            }
+        }
+    }
+}
+//Configuro un header con un nav sticky(solo en la versión para mas de 1000px)
+header{
+    background-color: hsla(0, 0%, 11%,);
+    @include desktop{
+        background-color: rgb(27, 27, 27);
+        position: sticky;
+        top: 0px; 
+        z-index: 2; 
+    }
+}
+.header__imagen{
+    background-color: rgb(27, 27, 27); 
+    height: 100px;  
+    margin-top: 5px; 
+    margin-bottom: 5px;
+    @include tablet{
+        height: 100px;
+        margin-top: 10px;
+    }
+}
+.navbar-nav{
+    gap: 25px;
+    color: white;
+    @include tablet{
+        text-align: center; 
+    }
+    @include phone{
+        gap: 5px;
+    }
+}
+.nav-item{
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    @include tablet{
+        font-size: 1.7rem;
+    }
+    @include phone{
+        font-size: 1.5rem; 
+    }
+}
+.nav-link{
+    color: white;
+    padding: 0;
+    @include desktop{
+        &:hover{
+            color: #fe0000;
+            border-top: solid 2px #fe0000;
+        }
+    }
+}
+.activo{
+    color: #fe0000;
+    &:hover{
+        color: white;
+    }
+}
+.navbar__icon{
+    width: 30px;
+}
+.header,.navbar{
+    @include desktop{
+        height: 110px;
+    }
+}

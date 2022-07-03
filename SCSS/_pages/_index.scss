@@ -1,0 +1,114 @@
+/*------------------------------------------INDEX STYLE---------------------------------------------*/
+.mainIndex{
+    text-align: center;
+    color: #fe0000;
+    font-family: 'harlow', sans-serif;
+    //Configuración de la caja introductoria
+    &__intro{
+        &--titulo{
+            background-color: rgb(27,27,27);
+            margin-top: 70px;
+            padding-bottom: 15px;
+            font-size: 4rem; 
+            @include phone{
+                font-size: 2.5rem;
+                margin-top: 25px;
+            }
+            @include tablet{
+                margin-top: 25px;
+            }
+        }
+        &--articulo{
+            padding-bottom: 25px;
+            padding-top: 25px;
+            background-color: #fe0000;
+            &--video{
+                width: 70%;
+                @include tablet{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    //Configuración de la caja de información
+    &__info{
+        margin-top: 25px;
+        margin-bottom: 25px;
+        &--art{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & img{
+                width: 60%;
+                transition-property: all;
+                transition-duration: 0.5s;
+                @include desktop{
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                @include phone{
+                    width: 60%;
+                }
+            }
+            & p{
+                padding-top: 10px;
+                font-weight: 400;
+                font-size: 1.3rem;
+                color: white;
+                width: 65%;
+                font-family: 'Oswald', sans-serif;
+                @include phone{
+                    font-size: 0.8rem;
+                    width: 85%;
+                    padding-bottom: 10px;
+                }
+            }
+            @include tablet{
+                margin-top: 30px;
+            }
+        }
+    }
+    //Configuración de la caja de la sección pedidos
+    &__pedidos{
+        background-color: rgb(27, 27, 27);
+        padding-bottom: 30px;
+        padding-top: 15px;
+        &--titulo{
+            padding-top: 15px; 
+            padding-bottom: 15px;
+            font-size: 4rem;
+            @include phone{
+                font-size: 2.7rem;
+                margin-top: 0px;
+            } 
+        }
+        @include phone{
+            padding-top: 5px;
+        }
+        &--cajaimg{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+            margin-top: 20px;
+            @include phone{
+                gap: 55px;
+            }
+            &--img{
+                height: 100px;
+                transition-property: all;
+                transition-duration: 0.5s;
+                @include desktop{
+                    &:hover{
+                        transform: scale(1.5);
+                    }
+                }
+                @include phone{
+                    height: 70px;
+                }
+            }
+        }
+   }
+}
