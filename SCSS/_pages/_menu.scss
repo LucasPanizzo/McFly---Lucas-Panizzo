@@ -43,20 +43,18 @@
         &--titulo{
             color: #fe0000;
             font-size: 3rem;
-            background-color: rgba(0, 0, 0, 0.40);
+            background-color: rgba(0, 0, 0, 0.70);
             width: 100%;
             text-align: center;
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
         }
         //Doy estilo a las tarjetas del menu navegable con clases distintas para aplicar los fondos
-        &--cardMenu{
+        &--card{
             height: 400px;
             width: 400px;
             border: 2px solid black;
             border-radius: 35px;
-            background-image: url(../img/menu/menuilus.jpg);
-            background-size: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -71,47 +69,18 @@
             @include tablet{
                 width: 60%;
             }
-        }
-        &--cardBurgers{
-            height: 400px;
-            width: 400px;
-            border: 2px solid black;
-            border-radius: 35px;
-            background-image: url(../img/menu/hamburguesas.jpg);
-            background-size: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition:all 0.5s;
-            @include desktop{
-                &:hover{
-                    transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-                }
+            &:nth-child(1){
+                background-image: url(../img/menu/menuilus.jpg);
+                background-size: 100%;
             }
-            @include tablet{
-                width: 60%;
+            &:nth-child(2){
+                background-image: url(../img/menu/hamburguesas.jpg);
+                background-size: 100%;
             }
-        }
-        &--cardExtras{
-            height: 400px;
-            width: 400px;
-            border: 2px solid black;
-            border-radius: 35px;
-            background-image: url(../img/menu/otros.jpg);
-            background-size: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition:all 0.5s;
-            @include desktop{
-                &:hover{
-                    transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
-                }
-            }
-            @include tablet{
-                width: 60%;
+            &:nth-child(3){
+                background-image: url(../img/menu/otros.jpg);
+                background-size: 100%;
+                backdrop-filter: sepia(90%);
             }
         }
     }
