@@ -61,8 +61,7 @@
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition:all 0.5s;
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
@@ -83,8 +82,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition:all 0.5s;
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
@@ -105,8 +103,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition:all 0.5s;
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
@@ -131,8 +128,7 @@
             width: 25%;
             border: 1px solid #fe0000;
             border-radius: 35px;
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition:all 0.5s;
             @include phone{
                 width: 80%;
             }
@@ -217,8 +213,7 @@
             border-radius: 35px;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.822);
-            transition-property: all;
-            transition-duration: 0.5s;
+            transition:all 0.5s;
             @include phone{
                 height: fit-content;
                 padding: 15px;
@@ -231,6 +226,7 @@
             }
             &--img{
                 width: 70%;
+                margin-bottom: 8px;
             }
             &--titulo{
                 font-size: 2rem;
@@ -294,6 +290,7 @@
             & img{
                 width: 95%;
                 border: 1px black solid;
+                transition: all 0.5s;
                 @include desktop{
                     &:hover{
                         transform: scale(1.2);

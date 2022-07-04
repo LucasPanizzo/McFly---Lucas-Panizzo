@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------galeria style------------------------------------------------*/
+.galeria{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    &__titulo{
+        text-align: center;
+        margin-top: 65px;
+        padding-bottom: 25px;
+        text-align: center;
+        color: #fe0000;
+        font-size: 5rem; 
+        font-family: 'harlow', sans-serif;
+        @include phone{
+            font-size: 3rem;
+            margin-top: 25px;
+            padding-bottom: 15px;
+        }
+        @include tablet{
+            margin-top: 25px;
+        }
+    }
+    & img{
+        width: 300px;
+        height: 300px;
+        @include tablet{
+            width: 200px;
+            height: 200px;
+        }
+        @include phone{
+            width: 120px;
+            height: 120px;
+        }
+    }
+}
+.modal-content img{
+    max-height: 92vh;
+}

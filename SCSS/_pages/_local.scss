@@ -1,0 +1,91 @@
+/*----------------------------------------NUESTRO LOCAL STYLE----------------------------------------------*/
+.local{
+    &__titulo{
+        text-align: center;
+        margin-top: 65px;
+        padding-bottom: 25px;
+        text-align: center;
+        color: #fe0000;
+        font-size: 5rem; 
+        font-family: 'harlow', sans-serif;
+        @include phone{
+            font-size: 3rem;
+            margin-top: 25px;
+            padding-bottom: 15px;
+        }
+        @include tablet{
+            margin-top: 25px;
+        }
+    }
+    //Configuro un display grid para el cuerpo de esta página
+    &__cuerpo{
+        width: 98vw;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        row-gap: 25px;
+        //Cambio el display a flex para ordenarlo de manera unidimensional.
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            width: 100vw;
+            row-gap: 0px;
+        }
+        &--card{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 500px;
+            padding: 25px 40px;
+            @include phone{
+                padding: 0px 10px;
+                height: fit-content;
+            }
+            @include tablet{
+                height: fit-content;
+            }
+            &--titulo{
+                font-size: 3.5rem;
+                color: #fe0000;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 600;
+                margin-bottom: 10px;
+                @include phone{
+                    font-size: 2rem;
+                }
+            }
+            &--texto{
+                font-size: 1.2rem;
+                margin-top: 10px;
+                font-family: 'Oswald', sans-serif;
+                font-weight: 300;
+                text-align: center;
+                font-style: italic;
+                color: white;
+            }
+            &--img{
+                height: 80%;
+                width: 100%;
+                @include phone{
+                    width: 100%;
+                    height: fit-content;
+                }
+                @include tablet{
+                    width: 100%;
+                }
+             }
+            & iframe{
+                @include tablet{
+                    height: 300px;
+                }
+            } 
+        }
+    }
+}

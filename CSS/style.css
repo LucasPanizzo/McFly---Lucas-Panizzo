@@ -314,8 +314,7 @@ footer {
 }
 .mainIndex__info--art img {
   width: 60%;
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
   .mainIndex__info--art img:hover {
@@ -468,8 +467,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
   .menuMF__tarjetas--cardMenu:hover {
@@ -492,8 +490,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
   .menuMF__tarjetas--cardBurgers:hover {
@@ -516,8 +513,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
   .menuMF__tarjetas--cardExtras:hover {
@@ -543,8 +539,7 @@ footer {
   width: 25%;
   border: 1px solid #fe0000;
   border-radius: 35px;
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (max-width: 700px) {
   .menuMF__menuCompleto img {
@@ -645,8 +640,7 @@ footer {
   border-radius: 35px;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.822);
-  transition-property: all;
-  transition-duration: 0.5s;
+  transition: all 0.5s;
 }
 @media screen and (max-width: 700px) {
   .menuMF__burgers--card {
@@ -662,6 +656,7 @@ footer {
 }
 .menuMF__burgers--card--img {
   width: 70%;
+  margin-bottom: 8px;
 }
 .menuMF__burgers--card--titulo {
   font-size: 2rem;
@@ -728,6 +723,7 @@ footer {
 .menuMF__extras--galeria img {
   width: 95%;
   border: 1px black solid;
+  transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
   .menuMF__extras--galeria img:hover {
@@ -761,5 +757,209 @@ footer {
 }
 
 /*---------------------------------------------CONTACTO STYLE----------------------------------------------*/
+.contacto__titulo {
+  text-align: center;
+  margin-top: 65px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .contacto__titulo {
+    margin-top: 25px;
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .contacto__titulo {
+    margin-top: 25px;
+  }
+}
+.contacto__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px;
+}
+.contacto__form--label {
+  color: white;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+}
+@media screen and (max-width: 700px) {
+  .contacto__form--label {
+    font-size: 1.5rem;
+  }
+}
+.contacto__form--input {
+  height: 2rem;
+  width: 35%;
+  background-color: #470202;
+  color: white;
+}
+@media screen and (max-width: 700px) {
+  .contacto__form--input {
+    width: 85%;
+  }
+}
+
+/*----------------------------------------NUESTRO LOCAL STYLE----------------------------------------------*/
+.local__titulo {
+  text-align: center;
+  margin-top: 65px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .local__titulo {
+    font-size: 3rem;
+    margin-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .local__titulo {
+    margin-top: 25px;
+  }
+}
+.local__cuerpo {
+  width: 98vw;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 25px;
+}
+@media screen and (max-width: 1000px) {
+  .local__cuerpo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100vw;
+    row-gap: 0px;
+  }
+}
+.local__cuerpo--card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 500px;
+  padding: 25px 40px;
+}
+@media screen and (max-width: 700px) {
+  .local__cuerpo--card {
+    padding: 0px 10px;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .local__cuerpo--card {
+    height: fit-content;
+  }
+}
+.local__cuerpo--card--titulo {
+  font-size: 3.5rem;
+  color: #fe0000;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 700px) {
+  .local__cuerpo--card--titulo {
+    font-size: 2rem;
+  }
+}
+.local__cuerpo--card--texto {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  color: white;
+}
+.local__cuerpo--card--img {
+  height: 80%;
+  width: 100%;
+}
+@media screen and (max-width: 700px) {
+  .local__cuerpo--card--img {
+    width: 100%;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .local__cuerpo--card--img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .local__cuerpo--card iframe {
+    height: 300px;
+  }
+}
+
+/*--------------------------------------------------------------galeria style------------------------------------------------*/
+.galeria {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: center;
+}
+.galeria__titulo {
+  text-align: center;
+  margin-top: 65px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: #fe0000;
+  font-size: 5rem;
+  font-family: "harlow", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .galeria__titulo {
+    font-size: 3rem;
+    margin-top: 25px;
+    padding-bottom: 15px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .galeria__titulo {
+    margin-top: 25px;
+  }
+}
+.galeria img {
+  width: 300px;
+  height: 300px;
+}
+@media screen and (max-width: 1000px) {
+  .galeria img {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .galeria img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.modal-content img {
+  max-height: 92vh;
+}
 
 /*# sourceMappingURL=style.css.map */
