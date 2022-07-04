@@ -456,6 +456,10 @@ footer {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
 }
+.menuMF__tarjetas--titulo:hover {
+  color: #fe0000;
+  letter-spacing: 3px;
+}
 .menuMF__tarjetas--card {
   height: 400px;
   width: 400px;
@@ -489,7 +493,6 @@ footer {
 .menuMF__tarjetas--card:nth-child(3) {
   background-image: url(../img/menu/otros.jpg);
   background-size: 100%;
-  backdrop-filter: sepia(90%);
 }
 .menuMF__menuCompleto {
   margin-top: 75px;

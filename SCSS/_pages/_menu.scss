@@ -48,6 +48,10 @@
             text-align: center;
             font-family: 'Oswald', sans-serif;
             font-weight: 700;
+            &:hover{
+                color: #fe0000;
+                letter-spacing: 3px;
+            }
         }
         //Doy estilo a las tarjetas del menu navegable con clases distintas para aplicar los fondos
         &--card{
@@ -80,7 +84,6 @@
             &:nth-child(3){
                 background-image: url(../img/menu/otros.jpg);
                 background-size: 100%;
-                backdrop-filter: sepia(90%);
             }
         }
     }
