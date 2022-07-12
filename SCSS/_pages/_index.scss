@@ -1,12 +1,12 @@
 /*------------------------------------------INDEX STYLE---------------------------------------------*/
 .mainIndex{
     text-align: center;
-    color: #fe0000;
+    color: map-get($paleta, primary);
     font-family: 'harlow', sans-serif;
     //Configuración de la caja introductoria
     &__intro{
         &--titulo{
-            background-color: rgb(27,27,27);
+            background-color: map-get($paleta, dark);
             margin-top: 70px;
             padding-bottom: 15px;
             font-size: 4rem; 
@@ -21,7 +21,7 @@
         &--articulo{
             padding-bottom: 25px;
             padding-top: 25px;
-            background-color: #fe0000;
+            background-color: map-get($paleta, primary);
             &--video{
                 width: 70%;
                 @include tablet{
@@ -55,7 +55,7 @@
                 padding-top: 10px;
                 font-weight: 400;
                 font-size: 1.3rem;
-                color: white;
+                color: map-get($paleta, claro);
                 width: 65%;
                 font-family: 'Oswald', sans-serif;
                 @include phone{
@@ -71,7 +71,7 @@
     }
     //Configuración de la caja de la sección pedidos
     &__pedidos{
-        background-color: rgb(27, 27, 27);
+        background-color: map-get($paleta, dark);
         padding-bottom: 30px;
         padding-top: 15px;
         &--titulo{

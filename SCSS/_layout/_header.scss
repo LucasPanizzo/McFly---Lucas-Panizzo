@@ -2,8 +2,8 @@
 //Agrego una sección previa al header que contiene información de la página.
 //Esta sección se muestra solo en la versión desktop.
 .preHeader{
-    background-color: rgb(0, 0, 0);
-    color:white;
+    background-color: map-get($paleta, oscuro);
+    color:map-get($paleta, claro);
     height: 32px;
     display: flex;
     width: 100%;
@@ -20,7 +20,7 @@
         i{
             font-size: 1rem;
             margin-left: 20px; 
-            color: rgb(211, 211, 211);
+            color: map-get($paleta, cgris);
         }
     }
 
@@ -28,7 +28,7 @@
         font-size: 0.8rem;
         font-family: Arial, Helvetica, sans-serif;
         font-style: italic;
-        color: rgb(211, 211, 211);
+        color: map-get($paleta, cgris);
         margin-top: 5px;
         margin-left: 5px;
     }
@@ -38,25 +38,24 @@
             font-size: 1.3rem;
             margin-top: 5px;
             margin-right: 25px;
-            color: rgb(211, 211, 211);
+            color: map-get($paleta, cgris);
             &:hover{
-                color: #fe0000;
+                color: map-get($paleta, primary);
             }
         }
     }
 }
 //Configuro un header con un nav sticky(solo en la versión para mas de 1000px)
 header{
-    background-color: hsla(0, 0%, 11%,);
+    background-color: map-get($paleta, dark);
     @include desktop{
-        background-color: rgb(27, 27, 27);
         position: sticky;
         top: 0px; 
         z-index: 2; 
     }
 }
 .header__imagen{
-    background-color: rgb(27, 27, 27); 
+    background-color: map-get($paleta, dark); 
     height: 100px;  
     margin-top: 5px; 
     margin-bottom: 5px;
@@ -67,7 +66,7 @@ header{
 }
 .navbar-nav{
     gap: 25px;
-    color: white;
+    color: map-get($paleta, claro);
     @include tablet{
         text-align: center; 
     }
@@ -87,19 +86,19 @@ header{
     }
 }
 .nav-link{
-    color: white;
+    color: map-get($paleta, claro);
     padding: 0;
     @include desktop{
         &:hover{
-            color: #fe0000;
-            border-top: solid 2px #fe0000;
+            color: map-get($paleta, primary);
+            border-top: solid 2px map-get($paleta, primary);
         }
     }
 }
 .activo{
-    color: #fe0000;
+    color: map-get($paleta, primary);
     &:hover{
-        color: white;
+        color: map-get($paleta, claro);
     }
 }
 .navbar__icon{

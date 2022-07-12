@@ -1,8 +1,8 @@
 /*------------------------------------------------FOOTER STYLE---------------------------------------------*/
 //Declaraciones generales para el latout del footer
 footer{
-    color: white;
-    background-color: rgb(22, 21, 21);
+    color: map-get($paleta, claro);;
+    background-color: map-get($paleta, dark);
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
     width: 100%;
@@ -15,7 +15,7 @@ footer{
         font-family: 'Oswald', sans-serif; 
         font-weight: 200;
         width: 100%;
-        color: rgba(171, 175, 179, 0.87);
+        color: map-get($paleta, gris);
         text-align: center; 
         grid-area:mcfly;
         align-self: center;
@@ -47,7 +47,7 @@ footer{
         }
         &--texto--p{
             font-size: 1rem;
-            color: rgba(171, 175, 179, 0.87);
+            color: map-get($paleta, gris);
             @include tablet{
                 font-size: 1rem;
             }
@@ -71,14 +71,14 @@ footer{
                 font-size: 70px;
             }
             &:hover{
-                color: #fe0000;
+                color: map-get($paleta, primary);;
             }
         }
     }
     //Sección de derechos de autor con estilo distinto al resto del footer
     &__derechos{
         text-align: center;
-        background-color: black;
+        background-color: map-get($paleta, oscuro);
         width: 100%;
         grid-area: derechos;
     }

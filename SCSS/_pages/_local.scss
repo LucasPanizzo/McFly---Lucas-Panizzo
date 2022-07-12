@@ -5,7 +5,7 @@
         margin-top: 65px;
         padding-bottom: 25px;
         text-align: center;
-        color: #fe0000;
+        color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
         @include phone{
@@ -53,7 +53,7 @@
             }
             &--titulo{
                 font-size: 3.5rem;
-                color: #fe0000;
+                color: map-get($paleta, primary);
                 font-family: 'Oswald', sans-serif;
                 font-weight: 600;
                 margin-bottom: 10px;
@@ -67,7 +67,7 @@
                 font-family: 'Oswald', sans-serif;
                 font-weight: 400;
                 text-align: center;
-                color: white;
+                color: map-get($paleta, claro);
             }
             &--img{
                 height: 80%;

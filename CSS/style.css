@@ -7,7 +7,7 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 body {
@@ -43,10 +43,14 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+strong {
+  display: block;
+}
+
 /*-------------------------------------------HEADER STYLE-------------------------------------------------*/
 .preHeader {
   background-color: rgb(0, 0, 0);
-  color: white;
+  color: rgb(255, 255, 255);
   height: 32px;
   display: flex;
   width: 100%;
@@ -85,15 +89,14 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(211, 211, 211);
 }
 .preHeader__rs i:hover {
-  color: #fe0000;
+  color: #F30000;
 }
 
 header {
-  background-color: hsl(0deg, 0%, 11%);
+  background-color: rgb(27, 27, 27);
 }
 @media screen and (min-width: 1001px) {
   header {
-    background-color: rgb(27, 27, 27);
     position: sticky;
     top: 0px;
     z-index: 2;
@@ -115,7 +118,7 @@ header {
 
 .navbar-nav {
   gap: 25px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 1000px) {
   .navbar-nav {
@@ -145,21 +148,21 @@ header {
 }
 
 .nav-link {
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 0;
 }
 @media screen and (min-width: 1001px) {
   .nav-link:hover {
-    color: #fe0000;
-    border-top: solid 2px #fe0000;
+    color: #F30000;
+    border-top: solid 2px #F30000;
   }
 }
 
 .activo {
-  color: #fe0000;
+  color: #F30000;
 }
 .activo:hover {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .navbar__icon {
@@ -174,8 +177,8 @@ header {
 
 /*------------------------------------------------FOOTER STYLE---------------------------------------------*/
 footer {
-  color: white;
-  background-color: rgb(22, 21, 21);
+  color: rgb(255, 255, 255);
+  background-color: rgb(27, 27, 27);
   font-family: "Oswald", sans-serif;
   font-weight: 200;
   width: 100%;
@@ -257,11 +260,11 @@ footer {
   }
 }
 .footer__redes i:hover {
-  color: #fe0000;
+  color: #F30000;
 }
 .footer__derechos {
   text-align: center;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   width: 100%;
   grid-area: derechos;
 }
@@ -269,7 +272,7 @@ footer {
 /*------------------------------------------INDEX STYLE---------------------------------------------*/
 .mainIndex {
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-family: "harlow", sans-serif;
 }
 .mainIndex__intro--titulo {
@@ -292,7 +295,7 @@ footer {
 .mainIndex__intro--articulo {
   padding-bottom: 25px;
   padding-top: 25px;
-  background-color: #fe0000;
+  background-color: #F30000;
 }
 .mainIndex__intro--articulo--video {
   width: 70%;
@@ -330,7 +333,7 @@ footer {
   padding-top: 10px;
   font-weight: 400;
   font-size: 1.3rem;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 65%;
   font-family: "Oswald", sans-serif;
 }
@@ -397,14 +400,14 @@ footer {
 
 /*-------------------------------------MENÚ STYLE--------------------------------------*/
 .menuMF {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .menuMF__titulo {
   background-color: rgb(27, 27, 27);
   margin-top: 70px;
   padding-bottom: 15px;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }
@@ -419,14 +422,6 @@ footer {
 @media screen and (max-width: 1000px) {
   .menuMF__titulo {
     margin-top: 25px;
-  }
-}
-.menuMF__img {
-  width: 100%;
-}
-@media screen and (max-width: 700px) {
-  .menuMF__img {
-    display: none;
   }
 }
 .menuMF__tarjetas {
@@ -448,7 +443,7 @@ footer {
   }
 }
 .menuMF__tarjetas--titulo {
-  color: #fe0000;
+  color: #F30000;
   font-size: 3rem;
   background-color: rgba(0, 0, 0, 0.7);
   width: 100%;
@@ -457,13 +452,13 @@ footer {
   font-weight: 700;
 }
 .menuMF__tarjetas--titulo:hover {
-  color: #fe0000;
+  color: #F30000;
   letter-spacing: 3px;
 }
 .menuMF__tarjetas--card {
   height: 400px;
   width: 400px;
-  border: 2px solid black;
+  border: 2px solid rgb(27, 27, 27);
   border-radius: 35px;
   display: flex;
   justify-content: center;
@@ -483,15 +478,15 @@ footer {
   }
 }
 .menuMF__tarjetas--card:nth-child(1) {
-  background-image: url(../img/menu/menuilus.jpg);
+  background-image: url(../img/menu/fondo1.jpg);
   background-size: 100%;
 }
 .menuMF__tarjetas--card:nth-child(2) {
-  background-image: url(../img/menu/hamburguesas.jpg);
+  background-image: url(../img/menu/fondo2.jpg);
   background-size: 100%;
 }
 .menuMF__tarjetas--card:nth-child(3) {
-  background-image: url(../img/menu/otros.jpg);
+  background-image: url(../img/menu/fondo3.jpg);
   background-size: 100%;
 }
 .menuMF__menuCompleto {
@@ -505,7 +500,7 @@ footer {
 }
 .menuMF__menuCompleto img {
   width: 25%;
-  border: 1px solid #fe0000;
+  border: 1px solid #F30000;
   border-radius: 35px;
   transition: all 0.5s;
 }
@@ -528,7 +523,7 @@ footer {
 }
 .menuMF__menuCompleto--titulo {
   width: 100%;
-  color: #fe0000;
+  color: #F30000;
   text-align: center;
   font-size: 3.5rem;
   font-family: "harlow", sans-serif;
@@ -582,7 +577,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin-top: 75px;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }
@@ -604,10 +599,10 @@ footer {
   flex-direction: column;
   width: 90%;
   flex-wrap: nowrap;
-  border: 2px solid #fe0000;
+  border: 2px solid #F30000;
   border-radius: 35px;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgb(0, 0, 0);
   transition: all 0.5s;
 }
 @media screen and (max-width: 700px) {
@@ -629,7 +624,7 @@ footer {
 .menuMF__burgers--card--titulo {
   font-size: 2rem;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   margin: 5px;
@@ -657,7 +652,7 @@ footer {
   margin-top: 75px;
   padding-bottom: 25px;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }
@@ -690,7 +685,7 @@ footer {
 }
 .menuMF__extras--galeria img {
   width: 95%;
-  border: 1px black solid;
+  border: 1px rgb(0, 0, 0) solid;
   transition: all 0.5s;
 }
 @media screen and (min-width: 1001px) {
@@ -730,7 +725,7 @@ footer {
   margin-top: 65px;
   padding-bottom: 25px;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }
@@ -754,7 +749,7 @@ footer {
   margin: 20px;
 }
 .contacto__form--label {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
@@ -768,7 +763,7 @@ footer {
   height: 2rem;
   width: 35%;
   background-color: #470202;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 @media screen and (max-width: 700px) {
   .contacto__form--input {
@@ -782,7 +777,7 @@ footer {
   margin-top: 65px;
   padding-bottom: 25px;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }
@@ -840,7 +835,7 @@ footer {
 }
 .local__cuerpo--card--titulo {
   font-size: 3.5rem;
-  color: #fe0000;
+  color: #F30000;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
   margin-bottom: 10px;
@@ -856,7 +851,7 @@ footer {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   text-align: center;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .local__cuerpo--card--img {
   height: 80%;
@@ -892,7 +887,7 @@ footer {
   margin-top: 65px;
   padding-bottom: 25px;
   text-align: center;
-  color: #fe0000;
+  color: #F30000;
   font-size: 5rem;
   font-family: "harlow", sans-serif;
 }

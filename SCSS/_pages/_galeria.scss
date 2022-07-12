@@ -10,7 +10,7 @@
         margin-top: 65px;
         padding-bottom: 25px;
         text-align: center;
-        color: #fe0000;
+        color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
         @include phone{
