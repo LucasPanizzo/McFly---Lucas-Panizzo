@@ -46,14 +46,6 @@
     }
 }
 //Configuro un header con un nav sticky(solo en la versión para mas de 1000px)
-header{
-    background-color: map-get($paleta, dark);
-    @include desktop{
-        position: sticky;
-        top: 0px; 
-        z-index: 2; 
-    }
-}
 .header__imagen{
     background-color: map-get($paleta, dark); 
     height: 100px;  
@@ -105,7 +97,11 @@ header{
     width: 30px;
 }
 .header,.navbar{
+    background-color: map-get($paleta, dark);
     @include desktop{
         height: 110px;
+        position: sticky;
+        top: 0px; 
+        z-index: 2; 
     }
 }

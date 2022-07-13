@@ -4,7 +4,6 @@
         text-align: center;
         margin-top: 65px;
         padding-bottom: 25px;
-        text-align: center;
         color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
@@ -73,11 +72,7 @@
                 height: 80%;
                 width: 100%;
                 @include phone{
-                    width: 100%;
                     height: fit-content;
-                }
-                @include tablet{
-                    width: 100%;
                 }
              }
             & iframe{
