@@ -49,8 +49,8 @@
         }
         //Doy estilo a las tarjetas del menu navegable con clases distintas para aplicar los fondos
         &--card{
-            height: 400px;
-            width: 400px;
+            height: 350px;
+            width: 350px;
             border: 2px solid map-get($paleta, dark);
             border-radius: 35px;
             display: flex;
@@ -63,9 +63,6 @@
                     transform: scale(1.05);
                     box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
                 }
-            }
-            @include tablet{
-                width: 60%;
             }
             &:nth-child(1){
                 background-image: url(../img/menu/fondo1.jpg);

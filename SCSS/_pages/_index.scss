@@ -107,6 +107,10 @@
                 @include phone{
                     height: 70px;
                 }
+                @media screen and (max-width:350px){
+                    height: 55px;
+                    
+                }
             }
         }
    }
