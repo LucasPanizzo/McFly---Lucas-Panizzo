@@ -8,13 +8,13 @@
         color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
+        @include tablet{
+            margin-top: 25px;
+        }
         @include phone{
             margin-top: 25px;
             font-size: 3rem;
             margin: 10px;
-        }
-        @include tablet{
-            margin-top: 25px;
         }
     }
     &__form{

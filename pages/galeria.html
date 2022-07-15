@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="McFly, un restaurante ambientando en los tipicos diner de los 60's americanos, ubicado en Neuquén Capital.">
-    <meta name="keywords" content="HTML, CSS, SCSS, Restaurant, restaurante, neuquen, nqn, diner, mcfly, comida, hamburguesas, papas fritas, milkshakes, patagonia, merienda, desayunos">
+    <meta name="description" content="McFly, un restaurante ambientando en los tipicos diner de los 60's americanos, ubicado en Neuquén Capital. ¡Te esperamos!">
     <title>Galería - McFly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -16,51 +15,53 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <section class="preHeader">
-        <div class="preHeaderData">
-            <i class="bi-telephone"></i>
-            <p class="preHeader__p">+54 299 156 112 270</p>
-            <i class="bi-envelope"></i>
-            <p class="preHeader__p">mcflynqn@gmail.com</p>
-            <i class="bi-geo-alt"></i>
-            <p class="preHeader__p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
-        </div>
-        <div class="preHeader__rs">
-            <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
-            <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
-        </div>
-    </section>
-    <!--Header y NAV sticky, no puedo lograr posicionar bien en el NAV, en un futuro lo haré más chico-->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container header">
-              <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="header__imagen"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../img/icons/menu.png" alt="Icono del navbar" class="navbar__icon">
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav container-fluid justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./menu.html">Menú</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./local.html">Nuestro local</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link activo" aria-current="page" href="./galeria.html">Galería</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
+  <header>
+    <!--Configuro un preheader para añadir data general de la página-->
+  <section class="preHeader">
+      <div class="preHeaderData">
+          <i class="bi-telephone"></i>
+          <p class="preHeader__p">+54 299 156 112 270</p>
+          <i class="bi-envelope"></i>
+          <p class="preHeader__p">mcflynqn@gmail.com</p>
+          <i class="bi-geo-alt"></i>
+          <p class="preHeader__p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+      </div>
+      <div class="preHeader__rs">
+          <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
+          <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
+      </div>
+  </section>
+</header>
+<!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container header">
+      <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../img/icons/menu.png" alt="" class="navbar__icon">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav container-fluid justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link"  href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./menu.html">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./local.html">Nuestro local</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activo" aria-current="page" href="./galeria.html">Galería</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <main>
+      <!--Galeria con bootsrap modals, la calidad de imagenes no es la mejor, pero son las que tengo.-->
       <h2 class="galeria__titulo titulo">Galería</h2>
       <div class="mosaico"></div>
       <section class="galeria">

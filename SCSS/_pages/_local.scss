@@ -7,14 +7,14 @@
         color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
-        @include phone{
-            font-size: 2.5rem;
-            margin-top: 25px;
-            padding-bottom: 15px;
-        }
         @include tablet{
             margin-top: 25px;
             font-size: 4rem;
+        }
+        @include phone{
+            font-size: 3rem;
+            margin-top: 25px;
+            padding-bottom: 15px;
         }
     }
     //Configuro un display grid para el cuerpo de esta página
@@ -44,15 +44,15 @@
             width: 100%;
             height: 500px;
             padding: 25px 40px;
-            @include phone{
-                padding: 0px 40px;
-                height: fit-content;
-                margin-bottom: 15px;
-            }
             @include tablet{
                 padding: 0px 65px;
                 height: fit-content;
                 margin-bottom: 20px;
+            }
+            @include phone{
+                padding: 0px 25px;
+                height: fit-content;
+                margin-bottom: 15px;
             }
             &--titulo{
                 font-size: 3rem;
@@ -60,11 +60,11 @@
                 font-family: 'Oswald', sans-serif;
                 font-weight: 600;
                 margin-bottom: 10px;
-                @include phone{
-                    font-size: 2rem;
-                }
                 @include tablet{
                     font-size: 3rem;
+                }
+                @include phone{
+                    font-size: 2rem;
                 }
             }
             &--texto{

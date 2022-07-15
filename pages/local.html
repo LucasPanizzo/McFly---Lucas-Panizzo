@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Creemos que en McFly tenemos cuatro claves para satisfacer a nuestros clientes; nuestra ubicación, el estilo de nuestro local, la comida, y la comodidad de los clientes.">
-    <meta name="keywords" content="HTML, CSS, SCSS, Restaurant, restaurante, neuquen, nqn, diner, mcfly, comida, hamburguesas, papas fritas, milkshakes, patagonia, merienda, desayunos">
     <title>Nuestro Local - McFly</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -16,55 +15,56 @@
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
-    <section class="preHeader">
-        <div class="preHeaderData">
-            <i class="bi-telephone"></i>
-            <p class="preHeader__p">+54 299 156 112 270</p>
-            <i class="bi-envelope"></i>
-            <p class="preHeader__p">mcflynqn@gmail.com</p>
-            <i class="bi-geo-alt"></i>
-            <p class="preHeader__p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
-        </div>
-        <div class="preHeader__rs">
-            <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
-            <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
-        </div>
-    </section>
-    <!--Header y NAV sticky, no puedo lograr posicionar bien en el NAV, en un futuro lo haré más chico-->
-    <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container header">
-              <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="header__imagen"></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="../img/icons/menu.png" alt="Icono de la navbar" class="navbar__icon">
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav container-fluid justify-content-end">
-                  <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Inicio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./menu.html">Menú</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link activo" aria-current="page" href="./local.html">Nuestro local</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./contacto.html">Contacto</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./galeria.html">Galería</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-    </header>
-    <!--No tengo bien en claro que voy a hacer en esta sección todavía, puse texto falso e imagenes ilustrativas hasta conseguir buenas imagenes sobre lo que quiero plasmar, pero queda mas o menos puesto el estilo que tendrá la página-->
+  <header>
+    <!--Configuro un preheader para añadir data general de la página-->
+  <section class="preHeader">
+      <div class="preHeaderData">
+          <i class="bi-telephone"></i>
+          <p class="preHeader__p">+54 299 156 112 270</p>
+          <i class="bi-envelope"></i>
+          <p class="preHeader__p">mcflynqn@gmail.com</p>
+          <i class="bi-geo-alt"></i>
+          <p class="preHeader__p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+      </div>
+      <div class="preHeader__rs">
+          <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
+          <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
+      </div>
+  </section>
+</header>
+<!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container header">
+      <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../img/icons/menu.png" alt="" class="navbar__icon">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav container-fluid justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link"  href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./menu.html">Menú</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link activo" aria-current="page" href="./local.html">Nuestro local</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./galeria.html">Galería</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!--Seccion para mostrar lo mas importante del local. Estoy tratando de conseguir imagenes mejores para la entrega final.-->
     <main class="local">
       <h2 class="local__titulo titulo">Nuestro Local</h2>
       <div class="mosaico"></div>
-      <section class="local__cuerpo">
+      <section class="local__cuerpo ">
           <article class="local__cuerpo--card" id="cardUbicacion">
               <h3 class="local__cuerpo--card--titulo">Ubicación</h3>
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12411.102272143873!2d-68.0582038!3d-38.9519553!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e64606fbb412dad!2sMc%20Fly%20Neuquen!5e0!3m2!1ses-419!2sar!4v1656610852351!5m2!1ses-419!2sar" class="local__cuerpo--card--img" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

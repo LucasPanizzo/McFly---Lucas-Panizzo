@@ -13,18 +13,19 @@
         color: map-get($paleta, primary);
         font-size: 5rem; 
         font-family: 'harlow', sans-serif;
-        @include phone{
-            font-size: 3rem;
-            margin-top: 25px;
-            padding-bottom: 15px;
-        }
         @include tablet{
             margin-top: 25px;
+        }
+        @include phone{
+            font-size: 3.5rem;
+            margin-top: 25px;
+            padding-bottom: 15px;
         }
     }
     & img{
         width: 300px;
         height: 300px;
+        transition:all 0.5s;
         @include tablet{
             width: 200px;
             height: 200px;
@@ -32,6 +33,12 @@
         @include phone{
             width: 120px;
             height: 120px;
+        }
+        @include desktop{
+            &:hover{
+                transform: scale(1.07);
+                border: 2px black solid;
+            }
         }
     }
 }
