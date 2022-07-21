@@ -87,21 +87,25 @@
         justify-content: space-evenly;
         width: 100%;
         flex-wrap: wrap;
-        & img{
+        & a{
             width: 25%;
             border: 1px solid map-get($paleta, primary);
-            border-radius: 35px;
             transition:all 0.5s;
+            border-radius: 35px;
+            & img{
+                border-radius: 35px;
+                width: 100%;
+            }
             @include tablet{
-                width: 80%;
-                border-radius: 55px;
+                width: 60%;
+                border-radius: 35px;
             }
             @include phone{
-                width: 80%;
+                width: 70%;
             }
             @include desktop{
                 &:hover{
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                     box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
                 }
             }
@@ -144,8 +148,7 @@
         width: 100%;
         margin-bottom: 25px;
         @include phone{
-            display: flex;
-            flex-wrap: wrap;
+            display: none;
         }
         &--titulo{
             @extend .menuMF__menuCompleto--titulo;
@@ -213,6 +216,52 @@
                     font-size: 0.9rem;
                     margin: 2px;
                 }
+            }
+        }
+        &Carousel{
+            margin: 25px;
+            &--titulo{
+                @extend .menuMF__burgers--titulo
+            }
+            &--item{
+                &--card{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    border: 2px solid map-get($paleta, primary);
+                    border-radius: 35px;
+                    height: 100%;
+                    background-color: map-get($paleta, oscuro);
+                    &--titulo{
+                        font-size: 1.5rem;
+                        text-align: center;
+                        color: map-get($paleta, primary);
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: 400;
+                        margin: 2px;
+                    }
+                    &--texto{
+                        font-size: 0.9rem;
+                        margin: 2px;
+                        margin-bottom: 3%;
+                        font-family: 'Oswald', sans-serif;
+                        font-weight: 300;
+                        text-align: center;
+                        font-style: italic;
+                        color: map-get($paleta,claro);
+                    }
+                }
+            }
+            @include desktop{
+                display: none;
+            }
+            @include tablet{
+                display: none;
+            }
+            @include phone{
+                display: block;
             }
         }
     }

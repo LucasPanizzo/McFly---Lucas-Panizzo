@@ -47,6 +47,12 @@ strong {
   display: block;
 }
 
+.modal-content img {
+  max-height: 92vh;
+  object-fit: contain;
+  background-color: rgb(27, 27, 27);
+}
+
 /*-------------------------------------------HEADER STYLE-------------------------------------------------*/
 .preHeader {
   background-color: rgb(0, 0, 0);
@@ -494,30 +500,34 @@ footer {
   width: 100%;
   flex-wrap: wrap;
 }
-.menuMF__menuCompleto img {
+.menuMF__menuCompleto a {
   width: 25%;
   border: 1px solid #F30000;
-  border-radius: 35px;
   transition: all 0.5s;
+  border-radius: 35px;
+}
+.menuMF__menuCompleto a img {
+  border-radius: 35px;
+  width: 100%;
 }
 @media screen and (max-width: 1000px) {
-  .menuMF__menuCompleto img {
-    width: 80%;
-    border-radius: 55px;
+  .menuMF__menuCompleto a {
+    width: 60%;
+    border-radius: 35px;
   }
 }
 @media screen and (max-width: 700px) {
-  .menuMF__menuCompleto img {
-    width: 80%;
+  .menuMF__menuCompleto a {
+    width: 70%;
   }
 }
 @media screen and (min-width: 1001px) {
-  .menuMF__menuCompleto img:hover {
-    transform: scale(1.1);
+  .menuMF__menuCompleto a:hover {
+    transform: scale(1.05);
     box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
   }
 }
-.menuMF__menuCompleto--titulo, .menuMF__extras--titulo, .menuMF__burgers--titulo {
+.menuMF__menuCompleto--titulo, .menuMF__extras--titulo, .menuMF__burgers--titulo, .menuMF__burgersCarousel--titulo {
   width: 100%;
   color: #F30000;
   text-align: center;
@@ -526,7 +536,7 @@ footer {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 700px) {
-  .menuMF__menuCompleto--titulo, .menuMF__extras--titulo, .menuMF__burgers--titulo {
+  .menuMF__menuCompleto--titulo, .menuMF__extras--titulo, .menuMF__burgers--titulo, .menuMF__burgersCarousel--titulo {
     font-size: 2.5rem;
     margin-bottom: 5px;
   }
@@ -562,11 +572,10 @@ footer {
 }
 @media screen and (max-width: 700px) {
   .menuMF__burgers {
-    display: flex;
-    flex-wrap: wrap;
+    display: none;
   }
 }
-.menuMF__burgers--titulo {
+.menuMF__burgers--titulo, .menuMF__burgersCarousel--titulo {
   grid-area: titulo;
   justify-content: center;
   align-items: center;
@@ -574,12 +583,12 @@ footer {
   font-size: 5rem;
 }
 @media screen and (max-width: 1000px) {
-  .menuMF__burgers--titulo {
+  .menuMF__burgers--titulo, .menuMF__burgersCarousel--titulo {
     margin-top: 20px;
   }
 }
 @media screen and (max-width: 700px) {
-  .menuMF__burgers--titulo {
+  .menuMF__burgers--titulo, .menuMF__burgersCarousel--titulo {
     font-size: 3rem;
     margin-top: 25px;
   }
@@ -640,6 +649,53 @@ footer {
   .menuMF__burgers--card--texto {
     font-size: 0.9rem;
     margin: 2px;
+  }
+}
+.menuMF__burgersCarousel {
+  margin: 25px;
+}
+.menuMF__burgersCarousel--item--card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  border: 2px solid #F30000;
+  border-radius: 35px;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+}
+.menuMF__burgersCarousel--item--card--titulo {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #F30000;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  margin: 2px;
+}
+.menuMF__burgersCarousel--item--card--texto {
+  font-size: 0.9rem;
+  margin: 2px;
+  margin-bottom: 3%;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-style: italic;
+  color: rgb(235, 235, 235);
+}
+@media screen and (min-width: 1001px) {
+  .menuMF__burgersCarousel {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .menuMF__burgersCarousel {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .menuMF__burgersCarousel {
+    display: block;
   }
 }
 .menuMF__extras {
@@ -932,10 +988,6 @@ footer {
     transform: scale(1.07);
     border: 2px black solid;
   }
-}
-
-.modal-content img {
-  max-height: 92vh;
 }
 
 /*# sourceMappingURL=style.css.map */

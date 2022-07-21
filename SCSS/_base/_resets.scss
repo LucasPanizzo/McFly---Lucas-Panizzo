@@ -41,3 +41,8 @@ h1,h2,h3,h4,h5,h6{
 strong{
     display: block;
 }
+.modal-content img{
+    max-height: 92vh;
+    object-fit: contain;
+    background-color: map-get($paleta, dark);
+}
