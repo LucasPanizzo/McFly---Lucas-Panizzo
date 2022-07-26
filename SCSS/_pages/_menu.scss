@@ -51,7 +51,7 @@
         &--card{
             height: 350px;
             width: 350px;
-            border: 2px solid map-get($paleta, dark);
+            border: 2px solid map-get($paleta, oscuro);
             border-radius: 35px;
             display: flex;
             justify-content: center;
@@ -61,7 +61,7 @@
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
                 }
             }
             &:nth-child(1){
@@ -106,7 +106,7 @@
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
                 }
             }
         }
@@ -148,7 +148,8 @@
         width: 100%;
         margin-bottom: 25px;
         @include phone{
-            display: none;
+            display: flex;
+            overflow: scroll
         }
         &--titulo{
             @extend .menuMF__menuCompleto--titulo;
@@ -179,13 +180,14 @@
             background-color: map-get($paleta, oscuro);
             transition:all 0.5s;
             @include phone{
-                height: fit-content;
+                height: 250px;
                 padding: 15px;
+                width: 500px;
             }
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
                 }
             }
             &--img{
@@ -216,52 +218,6 @@
                     font-size: 0.9rem;
                     margin: 2px;
                 }
-            }
-        }
-        &Carousel{
-            margin: 25px;
-            &--titulo{
-                @extend .menuMF__burgers--titulo
-            }
-            &--item{
-                &--card{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-                    flex-wrap: nowrap;
-                    border: 2px solid map-get($paleta, primary);
-                    border-radius: 35px;
-                    height: 100%;
-                    background-color: map-get($paleta, oscuro);
-                    &--titulo{
-                        font-size: 1.5rem;
-                        text-align: center;
-                        color: map-get($paleta, primary);
-                        font-family: 'Oswald', sans-serif;
-                        font-weight: 400;
-                        margin: 2px;
-                    }
-                    &--texto{
-                        font-size: 0.9rem;
-                        margin: 2px;
-                        margin-bottom: 3%;
-                        font-family: 'Oswald', sans-serif;
-                        font-weight: 300;
-                        text-align: center;
-                        font-style: italic;
-                        color: map-get($paleta,claro);
-                    }
-                }
-            }
-            @include desktop{
-                display: none;
-            }
-            @include tablet{
-                display: none;
-            }
-            @include phone{
-                display: block;
             }
         }
     }
@@ -308,7 +264,7 @@
                 @include desktop{
                     &:hover{
                         transform: scale(1.2);
-                        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
                         z-index:2;
                     }
                 }

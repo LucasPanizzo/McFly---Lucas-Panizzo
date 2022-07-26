@@ -69,14 +69,36 @@
             display: flex;
             width: 100%;
             justify-content: center;
+            @include tablet{
+                flex-direction: column;
+                align-items: center;
+            }
             & img{
                 clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
                 width: 30%;
+                @include tablet{
+                    width: 350px;
+                    height: 307px;
+                }
                 @include phone{
-                    
-                    width: 33%;
+                    width: 207px;
+                    height: 207px;
                 }
             }
         }
     }    
+}
+#cuerpo__galeria{
+    &--desktop{
+        @include tablet{
+            display: none;
+        }
+    }
+    &--phone{
+        @include desktop{
+            display: none;
+        }
+        display: block;
+        clip-path: polygon(0 0, 75% 1%, 100% 100%, 25% 100%);
+    }
 }

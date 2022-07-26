@@ -5,6 +5,10 @@
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
+    @include phone{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
     &__titulo{
         text-align: center;
         margin-top: 65px;
@@ -31,8 +35,8 @@
             height: 200px;
         }
         @include phone{
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
         }
         @include desktop{
             &:hover{
