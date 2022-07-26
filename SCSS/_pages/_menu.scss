@@ -149,7 +149,7 @@
         margin-bottom: 25px;
         @include phone{
             display: flex;
-            overflow: scroll
+            flex-wrap: wrap;
         }
         &--titulo{
             @extend .menuMF__menuCompleto--titulo;
@@ -160,9 +160,9 @@
             font-size: 5rem; 
             @include tablet{
                 margin-top: 20px;
+                font-size: 4rem;
             }
             @include phone{
-                font-size: 3rem;
                 margin-top: 25px;
             }
             
@@ -180,14 +180,13 @@
             background-color: map-get($paleta, oscuro);
             transition:all 0.5s;
             @include phone{
-                height: 250px;
+                height: fit-content;
                 padding: 15px;
-                width: 500px;
             }
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
+                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
                 }
             }
             &--img{
@@ -201,10 +200,6 @@
                 font-family: 'Oswald', sans-serif;
                 font-weight: 400;
                 margin: 5px;
-                @include phone{
-                    font-size: 1.5rem;
-                    margin: 2px;
-                }
             }
             &--texto{
                 font-size: 1.1rem;
@@ -214,10 +209,6 @@
                 font-weight: 300;
                 text-align: center;
                 font-style: italic;
-                @include phone{
-                    font-size: 0.9rem;
-                    margin: 2px;
-                }
             }
         }
     }

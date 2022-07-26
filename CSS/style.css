@@ -573,7 +573,7 @@ footer {
 @media screen and (max-width: 700px) {
   .menuMF__burgers {
     display: flex;
-    overflow: scroll;
+    flex-wrap: wrap;
   }
 }
 .menuMF__burgers--titulo {
@@ -586,11 +586,11 @@ footer {
 @media screen and (max-width: 1000px) {
   .menuMF__burgers--titulo {
     margin-top: 20px;
+    font-size: 4rem;
   }
 }
 @media screen and (max-width: 700px) {
   .menuMF__burgers--titulo {
-    font-size: 3rem;
     margin-top: 25px;
   }
 }
@@ -609,15 +609,14 @@ footer {
 }
 @media screen and (max-width: 700px) {
   .menuMF__burgers--card {
-    height: 250px;
+    height: fit-content;
     padding: 15px;
-    width: 500px;
   }
 }
 @media screen and (min-width: 1001px) {
   .menuMF__burgers--card:hover {
     transform: scale(1.05);
-    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 5px 5px 4px rgba(0, 0, 0, 0.67);
   }
 }
 .menuMF__burgers--card--img {
@@ -632,12 +631,6 @@ footer {
   font-weight: 400;
   margin: 5px;
 }
-@media screen and (max-width: 700px) {
-  .menuMF__burgers--card--titulo {
-    font-size: 1.5rem;
-    margin: 2px;
-  }
-}
 .menuMF__burgers--card--texto {
   font-size: 1.1rem;
   margin: 5px;
@@ -646,12 +639,6 @@ footer {
   font-weight: 300;
   text-align: center;
   font-style: italic;
-}
-@media screen and (max-width: 700px) {
-  .menuMF__burgers--card--texto {
-    font-size: 0.9rem;
-    margin: 2px;
-  }
 }
 .menuMF__extras {
   display: flex;
