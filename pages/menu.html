@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-      <!--Configuro un preheader para añadir data general de la página-->
+        <!--Información general del cliente en el header-->
     <section class="preHeader">
         <div class="preHeaderData">
             <i class="bi-telephone"></i>
@@ -32,17 +32,18 @@
         </div>
     </section>
   </header>
-  <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
-  <nav class="navbar navbar-expand-lg">
-      <div class="container header">
-        <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+    <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+    <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="../img/icons/menu.png" alt="" class="navbar__icon">
+          <img src="../img/icons/menu.png" alt="Icono de la Navbar" class="navbar__icon">
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav container-fluid justify-content-end">
             <li class="nav-item">
-              <a class="nav-link"  href="../index.html">Inicio</a>
+              <a class="nav-link" href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link activo" aria-current="page" href="./menu.html">Menú</a>
@@ -78,7 +79,7 @@
                 </a>
             </article>
             <a name="MenuCompleto"></a><div class="mosaico" id="mosaicoMenuCompleto"></div></a>
-            <!--Sección con el menú completo-->
+            <!--Sección con imagenes del menú completo-->
             <article class="menuMF__menuCompleto">
                 <h3 class="menuMF__menuCompleto--titulo titulo">Menú Completo</h3>
                 <a href="!#" data-bs-toggle="modal" data-bs-target="#menuCompleto1">
@@ -92,7 +93,7 @@
                 </a> 
             </article>
             <a name="Burgers"><div class="mosaico"></div></a>
-            <!--Agrego una sección de hamburguesas-->
+            <!--Sección explicativa de todas las hamburguesas del menú, producto principal del cliente.-->
             <article class="menuMF__burgers">
                 <h3 class="menuMF__burgers--titulo titulo">Burgers</h3>
                     <div class="menuMF__burgers--card">
@@ -145,7 +146,7 @@
             <!--Galeria de imagenes para mostrar otras secciones del menu. Carousel para la version mobile, galeria con grids para la version desktop.-->
             <article class="menuMF__extras">
                 <h3 class="menuMF__extras--titulo titulo">Extras</h3>
-                <!--Carousel para la versión de menos de 1000px-->
+                <!--Carousel para la versión Mobile-->
                 <div id="carouselExampleControls" class="carousel slide menuMF__extras--carousel" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -191,7 +192,7 @@
         <div tabindex="-1" aria-labelledby="menuCompleto3" aria-hidden="true" class="modal fade" id="menuCompleto3">
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-              <img src="../img/menu/menu1.jpg" alt="Barra">
+              <img src="../img/menu/menu1.jpg" alt="Menu Completo de McFly">
             </div>
           </div>
         </div>
@@ -199,7 +200,7 @@
         <div tabindex="-1" aria-labelledby="menuCompleto2" aria-hidden="true" class="modal fade" id="menuCompleto2">
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-              <img src="../img/menu/menu2.jpg" alt="Barra">
+              <img src="../img/menu/menu2.jpg" alt="Menu Completo de McFly">
             </div>
           </div>
         </div>
@@ -207,7 +208,7 @@
         <div tabindex="-1" aria-labelledby="menuCompleto1" aria-hidden="true" class="modal fade" id="menuCompleto1">
           <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
-              <img src="../img/menu/menu3.jpg" alt="Barra">
+              <img src="../img/menu/menu3.jpg" alt="Menu Completo de McFly">
             </div>
           </div>
         </div>
@@ -215,7 +216,8 @@
     </main>
     <footer>
       <div class="row">
-          <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Utilización de grids de bootstrap para el responsive.-->
           <section class="footer__contactos col-md">
               <strong class="footer__contactos--titulo">CONTACTO</strong>
               <article class="footer__contactos--texto">

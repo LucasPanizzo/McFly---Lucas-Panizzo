@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <!--Configuro un preheader para añadir data general de la página-->
+        <!--Información general del cliente en el header-->
   <section class="preHeader">
       <div class="preHeaderData">
           <i class="bi-telephone"></i>
@@ -32,34 +32,35 @@
       </div>
   </section>
 </header>
-<!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
-<nav class="navbar navbar-expand-lg">
-    <div class="container header">
-      <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="../img/icons/menu.png" alt="" class="navbar__icon">
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav container-fluid justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link"  href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./menu.html">Menú</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./nosotros.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link activo" aria-current="page" href="./galeria.html">Galería</a>
-          </li>
-        </ul>
+    <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+    <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/icons/menu.png" alt="Icono de la NavBar" class="navbar__icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav container-fluid justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link activo" aria-current="page" href="./galeria.html">Galería</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
     <main>
       <!--Galeria con bootsrap modals, la calidad de imagenes no es la mejor, pero son las que tengo.-->
       <h2 class="galeria__titulo titulo">Galería</h2>
@@ -275,7 +276,8 @@
     <!--Fin galeria Modal-->
     <footer>
       <div class="row">
-          <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Utilización de grids de bootstrap para el responsive.-->
           <section class="footer__contactos col-md">
               <strong class="footer__contactos--titulo">CONTACTO</strong>
               <article class="footer__contactos--texto">

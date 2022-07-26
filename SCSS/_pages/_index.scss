@@ -48,6 +48,9 @@
                         transform: scale(1.1);
                     }
                 }
+                @include tablet{
+                    width: 50%;
+                }
                 @include phone{
                     width: 60%;
                 }

@@ -61,7 +61,7 @@
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
+                    box-shadow: $box-shadow;
                 }
             }
             &:nth-child(1){
@@ -106,7 +106,7 @@
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
+                    box-shadow: $box-shadow;
                 }
             }
         }
@@ -186,7 +186,7 @@
             @include desktop{
                 &:hover{
                     transform: scale(1.05);
-                    box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.67);
+                    box-shadow: $box-shadow;
                 }
             }
             &--img{
@@ -255,7 +255,7 @@
                 @include desktop{
                     &:hover{
                         transform: scale(1.2);
-                        box-shadow: 4px 5px 5px 4px rgba(0,0,0,0.5);
+                        box-shadow: $box-shadow;
                         z-index:2;
                     }
                 }

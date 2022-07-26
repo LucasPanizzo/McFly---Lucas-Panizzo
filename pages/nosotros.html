@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <!--Configuro un preheader para añadir data general de la página-->
+        <!--Información general del cliente en el header-->
   <section class="preHeader">
       <div class="preHeaderData">
           <i class="bi-telephone"></i>
@@ -32,35 +32,36 @@
       </div>
   </section>
 </header>
-<!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
-<nav class="navbar navbar-expand-lg">
-    <div class="container header">
-      <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="../img/icons/menu.png" alt="" class="navbar__icon">
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav container-fluid justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link"  href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./menu.html">Menú</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link activo" aria-current="page" href="./nosotros.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./galeria.html">Galería</a>
-          </li>
-        </ul>
+    <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+    <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/icons/menu.png" alt="Icono de la navbar" class="navbar__icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav container-fluid justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link activo" aria-current="page" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./galeria.html">Galería</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!--Seccion para mostrar lo mas importante del local. Estoy tratando de conseguir imagenes mejores para la entrega final.-->
+    </nav>
+  <!--Sección descriptiva sobre el local del cliente.-->
   <main class="local">
     <h2 class="local__titulo titulo">Nosotros</h2>
     <div class="mosaico"></div>
@@ -68,7 +69,7 @@
       <article class="local__cuerpo--mcfly container">
         <span>McFly</span>
         <p>La idea nació en 2020, en plena pandemia y confinamiento. Somos tres familias que nos unimos y ponemos el esfuerzo, las ideas y toda la mano de obra para crear este local.</p>
-        <p>Nuestra idea era crear algo distinto, para que nuestros invitados se sientan como en aquellos diners de los 60s en los que nos inspiramos para el estilo del local.</p>
+        <p>Nuestra idea era crear algo distinto, para que nuestros invitados se sientan como en aquellos diners de los 60s en los que nos inspiramos para nuestro estilo.</p>
         <p>&nbsp</p>
         <p>En McFly, creemos que contamos con 4 elementos principales para satisfacer a nuestros clientes.</p>
         <p>&nbsp</p>
@@ -77,11 +78,12 @@
         <p>-La comodidad</p>
         <p>-Nuestro estilo</p>
       </article>
+      <!--Imagenes que reaccionan distinto según el dispositivo.-->
       <article class="local__cuerpo--galeria">
-        <img src="../img/galeria/barrafull.jpg" alt="">
-        <img src="../img/galeria/comidas.jpg" id="cuerpo__galeria--desktop" alt="">
-        <img src="../img/galeria/comidas.jpg" id="cuerpo__galeria--phone" alt="">
-        <img src="../img/galeria/local2.jpg" alt="">
+        <img src="../img/galeria/barrafull.jpg" alt="Barra de McFly">
+        <img src="../img/galeria/comidas.jpg" id="cuerpo__galeria--desktop" alt="Comida McFly">
+        <img src="../img/galeria/comidas.jpg" id="cuerpo__galeria--phone" alt="Comida McFly">
+        <img src="../img/galeria/local2.jpg" alt="Interior de McFly">
       </article>
       <article class="local__cuerpo--elementos container">
         <span>Ubicación</span>
@@ -91,7 +93,7 @@
         <p>Nuestro restaurante está inspirado en los diner americanos en la decada de los 60's en adelante. En McFly vas a viajar por el tiempo, con nuestra decoración de estilo doo-wop y nuestros pin-ups en las paredes ambientados en la epoca.</p>
         <p>&nbsp</p>
         <span>Comodidad</span>
-        <p>En McFly vas a estar súper comodo en nuestro boxes con sillones cueros, especiales para tú confort. También tenemos disponible una extensa barra disponible para nuestros clientes.</p>
+        <p>En McFly vas a estar súper comodo en nuestro boxes con sillones cueros, especialmente diseñados para tú confort. También tenemos disponible una extensa barra disponible para nuestros clientes.</p>
         <p>&nbsp</p>
         <span>Gastronomía</span>
         <p>En nuestra cocina te traemos lo mejor de la comida americana directo a tu mesa. Vas a poder probar nuestras increibles hamburguesas, tipicos desayunos americanos o nuestros club sandwiches</p>
@@ -102,7 +104,8 @@
   </main>
   <footer>
     <div class="row">
-        <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Utilización de grids de bootstrap para el responsive.-->
         <section class="footer__contactos col-md">
             <strong class="footer__contactos--titulo">CONTACTO</strong>
             <article class="footer__contactos--texto">

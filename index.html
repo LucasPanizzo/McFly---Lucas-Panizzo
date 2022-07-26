@@ -16,7 +16,7 @@
 </head>
 <body class="bodyIndex">
     <header>
-        <!--Configuro un preheader para añadir data general de la página-->
+        <!--Información general del cliente en el header-->
     <section class="preHeader">
         <div class="preHeaderData">
             <i class="bi-telephone"></i>
@@ -33,11 +33,12 @@
     </section>
     </header>
     <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+    <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
     <nav class="navbar navbar-expand-lg">
-        <div class="container header">
-          <a class="navbar-brand" href="./index.html"><img src="./img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
+        <div class="container">
+          <a class="navbar-brand" href="./index.html"><img src="./img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <img src="./img/icons/menu.png" alt="" class="navbar__icon">
+            <img src="./img/icons/menu.png" alt="Icono de la navbar" class="navbar__icon">
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav container-fluid justify-content-end">
@@ -71,17 +72,18 @@
         </section>
         <div class="mosaico"></div>
         <!--Sección con información general de nuestros productos y forma de trabajar.-->
+        <!--Utilización de grids de bootstrap para el responsive.-->
         <section class="mainIndex__info row">
             <article class="mainIndex__info--art col-lg">
-                <img src="./img/muca.png" alt="">
+                <img src="./img/muca.png" alt="Logo de MUCA">
                 <p>Trabajamos con la mejor carne de la zona, traída por MUCA, para satisfacer a nuestros clientes.</p>
             </article>
             <article class="mainIndex__info--art col-lg">
-                <img src="./img/smashed.png" alt="">
+                <img src="./img/smashed.png" alt="Ilustración smashed burgers">
                 <p>Todas nuestras hamburguesas se hacen a la plancha, utlizando la técnica del smash.</p>
             </article>
             <article class="mainIndex__info--art col-lg">
-                <img src="./img/natural.png" alt="">
+                <img src="./img/natural.png" alt="Ilustración ingredientes naturales">
                 <p>Trabajamos solo con ingredientes frescos, casi la totalidad del menú esta elaborado en nuestro restaurante.</p>
             </article>
         </section>
@@ -90,9 +92,9 @@
         <section class="mainIndex__pedidos">
             <h2 class="mainIndex__pedidos--titulo titulo">Hacé tu pedido online</h2>
             <article class="mainIndex__pedidos--cajaimg">
-                <a href="https://neuquen.toque.com.ar/web/detalle/?id=3337" value="_blank" target="_blank" ><img src="./img/Screenshot_2.png" alt="toque" class="mainIndex__pedidos--cajaimg--img"></a>
-                <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/mcfly-american-food-menu" target="_blank" ><img src="./img/untitled-1_56.png" alt="pedidosya" class="mainIndex__pedidos--cajaimg--img"></a>
-                <a href="https://api.whatsapp.com/send/?phone=%2B5492996112270&text&app_absent=0" target="_blank" ><img src="./img/580b57fcd9996e24bc43c543.png" alt="whatsapp logo" class="mainIndex__pedidos--cajaimg--img"></a>
+                <a href="https://neuquen.toque.com.ar/web/detalle/?id=3337" value="_blank" target="_blank" ><img src="./img/Screenshot_2.png" alt="Logo de Toque" class="mainIndex__pedidos--cajaimg--img"></a>
+                <a href="https://www.pedidosya.com.ar/restaurantes/neuquen/mcfly-american-food-menu" target="_blank" ><img src="./img/untitled-1_56.png" alt="Logo de Pedidos Ya" class="mainIndex__pedidos--cajaimg--img"></a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B5492996112270&text&app_absent=0" target="_blank" ><img src="./img/580b57fcd9996e24bc43c543.png" alt="Logo de Whatsapp" class="mainIndex__pedidos--cajaimg--img"></a>
             </article>
         </section>
         <div class="mosaico"></div>
@@ -100,6 +102,7 @@
     <footer>
         <div class="row">
             <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Utilización de grids de bootstrap para el responsive.-->
             <section class="footer__contactos col-md">
                 <strong class="footer__contactos--titulo">CONTACTO</strong>
                 <article class="footer__contactos--texto">
@@ -112,7 +115,7 @@
                 </article>
             </section>
             <section class="footer__mcfly col-md">
-                <img src="./img/solo-letras.png" alt="logo-mcfly" class="footer__mcfly--img">
+                <img src="./img/solo-letras.png" alt="Logo de McFly" class="footer__mcfly--img">
                 <p>Restaurante ambientado en los 60's con asientos de </p>
                 <p>cuero rojo, pin-ups y comida americana.</p>
             </section>

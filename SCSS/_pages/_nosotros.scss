@@ -76,6 +76,10 @@
             & img{
                 clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
                 width: 30%;
+                transition: all 0.5s;
+                &:hover{
+                    transform: scale(1.1);
+                }
                 @include tablet{
                     width: 350px;
                     height: 307px;

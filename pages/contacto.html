@@ -16,7 +16,7 @@
 </head>
 <body>
   <header>
-    <!--Configuro un preheader para añadir data general de la página-->
+        <!--Información general del cliente en el header-->
   <section class="preHeader">
       <div class="preHeaderData">
           <i class="bi-telephone"></i>
@@ -32,54 +32,78 @@
       </div>
   </section>
 </header>
-<!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
-<nav class="navbar navbar-expand-lg">
-    <div class="container header">
-      <a class="navbar-brand" href="./index.html"><img src="../img/logo-mcfly.png" alt="logo-mcfly" class="header__imagen"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="../img/icons/menu.png" alt="" class="navbar__icon">
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav container-fluid justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link"  href="../index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./menu.html">Menú</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./nosotros.html">Nosotros</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link activo" aria-current="page" href="./contacto.html">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./galeria.html">Galería</a>
-          </li>
-        </ul>
+    <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
+    <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html"><img src="../img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../img/icons/menu.png" alt="Icono de la NavBar" class="navbar__icon">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav container-fluid justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./menu.html">Menú</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link activo" aria-current="page" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./galeria.html">Galería</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <!--Form para contactar con el cliente, estoy pensando que otro contenido le puedo agregar-->
+    </nav>
+  <!--Formulario y vías de contacto.-->
     <main class="contacto">
         <h2 class="contacto__titulo titulo">Envíanos tu mensaje</h2>
         <div class="mosaico"></div>
-        <form action="" class="contacto__form">
-            <label for="form-nombre" class="contacto__form--label">Nombre y Apellido:</label>
-            <input type="text" name="" id="form-nombre" class="contacto__form--input">
-            <label for="form-mail" class="contacto__form--label">EMail:</label>
-            <input type="email" name="" id="form-mail" class="contacto__form--input">
-            <label for="form-tel" class="contacto__form--label">Teléfono:</label>
-            <input type="tel" name="" id="form-tel" class="contacto__form--input">
-            <label for="form-comentario" class="contacto__form--label">Deja tu mensaje:</label>
-            <textarea name="" id="form-comentario" cols="30" rows="10" class="contacto__form--input"></textarea>
-            <input type="submit" name="" id="" class="contacto__form--input">
-        </form>    
+        <section class="contacto__cuerpo">
+          <form action="" class="contacto__cuerpo--form">
+              <label for="form-nombre" class="contacto__cuerpo--form--label">Nombre y Apellido:</label>
+              <input type="text" name="" id="form-nombre" class="contacto__cuerpo--form--input">
+              <label for="form-mail" class="contacto__cuerpo--form--label">EMail:</label>
+              <input type="email" name="" id="form-mail" class="contacto__cuerpo--form--input">
+              <label for="form-tel" class="contacto__cuerpo--form--label">Teléfono:</label>
+              <input type="tel" name="" id="form-tel" class="contacto__cuerpo--form--input">
+              <label for="form-comentario" class="contacto__cuerpo--form--label">Deja tu mensaje:</label>
+              <textarea name="" id="form-comentario" cols="30" rows="10" class="contacto__cuerpo--form--input"></textarea>
+              <input type="submit" name="" id="" class="contacto__cuerpo--form--input">
+          </form>  
+          <article class="contacto__cuerpo--info">
+            <p>Nos encanta recibir comentarios sobre nuestro servicio y comida. Completá el formulario para
+              hacernos saber cuánto disfrutaste de tu tiempo en McFly.</p>
+            <p>&nbsp</p>  
+            <p>Si tenés preguntas sobre la comida, la organización de un evento o una fiesta a través de McFly, comunícate con el formulario.</p>
+            <div class="contacto__cuerpo--info--data">
+              <div>
+                <i class="bi-telephone"></i>
+                <p>+54 299 156 112 270</p>
+              </div>  
+              <div>
+                <i class="bi-envelope"></i>
+                <p>mcflynqn@gmail.com</p>
+              </div>
+              <div>
+                <i class="bi-geo-alt"></i>
+                <p>Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+              </div>  
+          </div>
+          </article>
+        </section>    
         <div class="mosaico"></div>
     </main>
     <footer>
       <div class="row">
-          <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Footer con sección de contacto,ubicación y redes sociales.-->
+            <!--Utilización de grids de bootstrap para el responsive.-->
           <section class="footer__contactos col-md">
               <strong class="footer__contactos--titulo">CONTACTO</strong>
               <article class="footer__contactos--texto">
