@@ -54,7 +54,7 @@ strong {
 }
 
 /*-------------------------------------------HEADER STYLE-------------------------------------------------*/
-.preHeader {
+.info {
   background-color: rgb(0, 0, 0);
   color: rgb(235, 235, 235);
   height: 32px;
@@ -64,20 +64,20 @@ strong {
   align-items: center;
 }
 @media screen and (max-width: 1000px) {
-  .preHeader {
+  .info {
     display: none;
   }
 }
-.preHeaderData {
+.info__data {
   display: flex;
   align-items: center;
 }
-.preHeaderData i {
+.info__data i {
   font-size: 1rem;
   margin-left: 20px;
   color: rgb(211, 211, 211);
 }
-.preHeader__p {
+.info p {
   font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
@@ -85,16 +85,16 @@ strong {
   margin-top: 5px;
   margin-left: 5px;
 }
-.preHeader__rs {
+.info__rs {
   margin-right: 50px;
 }
-.preHeader__rs i {
+.info__rs i {
   font-size: 1.3rem;
   margin-top: 5px;
   margin-right: 25px;
   color: rgb(211, 211, 211);
 }
-.preHeader__rs i:hover {
+.info__rs i:hover {
   color: #F30000;
 }
 
@@ -169,7 +169,7 @@ strong {
 }
 @media screen and (min-width: 1001px) {
   .navbar {
-    height: 110px;
+    height: 120px;
     position: sticky;
     top: 0px;
     z-index: 3;
@@ -913,6 +913,7 @@ footer {
 }
 .local__cuerpo--galeria img:hover {
   transform: scale(1.1);
+  z-index: 1;
 }
 @media screen and (max-width: 1000px) {
   .local__cuerpo--galeria img {

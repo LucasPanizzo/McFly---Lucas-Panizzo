@@ -14,33 +14,32 @@
     <link rel="icon" href="./img/sin-subtitulo.png"> 
     <link rel="stylesheet" href="./CSS/style.css">
 </head>
-<body class="bodyIndex">
+<body>
     <header>
         <!--Información general del cliente en el header-->
-    <section class="preHeader">
-        <div class="preHeaderData">
-            <i class="bi-telephone"></i>
-            <p class="preHeader__p">+54 299 156 112 270</p>
-            <i class="bi-envelope"></i>
-            <p class="preHeader__p">mcflynqn@gmail.com</p>
-            <i class="bi-geo-alt"></i>
-            <p class="preHeader__p">Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
-        </div>
-        <div class="preHeader__rs">
-            <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
-            <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
-        </div>
-    </section>
+        <section class="info">
+            <div class="info__data">
+                <i class="bi-telephone"></i>
+                <p>+54 299 156 112 270</p>
+                <i class="bi-envelope"></i>
+                <p>mcflynqn@gmail.com</p>
+                <i class="bi-geo-alt"></i>
+                <p>Ministro Gonzalez 47,Neuquén Capital,Argentina</p>
+            </div>
+            <div class="info__rs">
+                <a href="https://www.instagram.com/mcflyamericanfood/" target="_blank"><i class="bi-instagram"></i></a>
+                <a href="https://www.facebook.com/mcflyamericanfood/" target="_blank"><i class="bi-facebook"></i></a>
+            </div>
+        </section>
     </header>
     <!--Configuro el navbar fuera del header ya que quiero que sea sticky, pero el header no.-->
     <!--Navbar extraído de bootstrap, modificado para adaptarlo al website-->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-          <a class="navbar-brand" href="./index.html"><img src="./img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg container">
+        <a class="navbar-brand" href="./index.html"><img src="./img/logo-mcfly.png" alt="Logo de McFly" class="navbar__imagen"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <img src="./img/icons/menu.png" alt="Icono de la navbar" class="navbar__icon">
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav container-fluid justify-content-end">
               <li class="nav-item">
                 <a class="nav-link activo" aria-current="page" href="./index.html">Inicio</a>
@@ -58,9 +57,8 @@
                 <a class="nav-link" href="./pages/galeria.html">Galería</a>
               </li>
             </ul>
-          </div>
         </div>
-      </nav>
+        </nav>
     <main class="mainIndex">
         <!--Sección principal de la página, con vídeo introductorio.-->
         <section class="mainIndex__intro">
